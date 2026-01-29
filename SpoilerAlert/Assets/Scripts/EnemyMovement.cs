@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     private PathPoint target;
     private PathPoint claimed;
     private bool stopped;
+    public EnemyBehaviour enemyBehaviour;
 
     public void Init(PathPoint entry)
     {
@@ -28,6 +29,13 @@ public class EnemyMovement : MonoBehaviour
                 claimed = target;
                 stopped = true;
                 rb.linearVelocity = Vector2.zero;
+
+                target.isOccupied = true;
+                claimed = target;
+                stopped = true;
+
+                enemyBehaviour.showSpoilerBar();
+
                 return;
             }
 

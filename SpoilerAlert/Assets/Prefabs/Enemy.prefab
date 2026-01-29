@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   rb: {fileID: 8052262797952035903}
   moveSpeed: 2
+  enemyBehaviour: {fileID: -8711810619576345434}
 --- !u!50 &8052262797952035903
 Rigidbody2D:
   serializedVersion: 5
@@ -150,6 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
   EnemySO: {fileID: 11400000, guid: 9f30d42f3d8fede4a93a836c3acd6d5c, type: 2}
   CurrentHealth: 1
+  SpoilerBarPrefab: {fileID: 7952561924919687190, guid: 78f16c63137b7454288ae7a19577d7fb, type: 3}
+  SpoilerBarOffset: {x: 0, y: 0.5, z: 0}
 --- !u!58 &9046713328625864145
 CircleCollider2D:
   m_ObjectHideFlags: 0
