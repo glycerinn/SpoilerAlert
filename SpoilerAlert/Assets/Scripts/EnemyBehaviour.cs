@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Drawing;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class EnemyBehaviour : MonoBehaviour
     private GameObject SpoilerBarInstance;
     private Slider SpoilerSlider;
     private Coroutine SpoilerRoutine;
+    private PathPoint pathPoint;
 
     public void Awake()
     {
@@ -51,8 +53,10 @@ public class EnemyBehaviour : MonoBehaviour
         CurrentHealth -= damage;
     }
 
-    public void showSpoilerBar()
+    public void showSpoilerBar(PathPoint point)
     {
+        pathPoint = point;
+
         if (SpoilerRoutine != null)
             StopCoroutine(SpoilerRoutine);
 
@@ -74,6 +78,13 @@ public class EnemyBehaviour : MonoBehaviour
         }
 
         SpoilerSlider.value = 1f;
+        OnSpoilerCharged();
+    }
+
+    private void OnSpoilerCharged()
+    {
+        if(pathPoint != null)
+            pathPoint.Spoiled = true;
     }
 
     private void StopSpoiler()

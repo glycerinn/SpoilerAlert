@@ -149,6 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 0}
   alternateNext: []
 --- !u!4 &28423629
@@ -211,6 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 1776861945}
   alternateNext: []
 --- !u!1 &154226863
@@ -283,6 +289,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 197256377}
   alternateNext: []
 --- !u!4 &165405563
@@ -330,6 +339,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 28423628}
   alternateNext: []
 --- !u!4 &197256378
@@ -392,6 +404,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 0}
   alternateNext: []
 --- !u!1 &260829697
@@ -427,6 +442,9 @@ Transform:
   - {fileID: 354439017}
   - {fileID: 154226864}
   - {fileID: 514506205}
+  - {fileID: 1954047302}
+  - {fileID: 1334040309}
+  - {fileID: 373345293}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &264878362
@@ -474,6 +492,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 1490302437}
   alternateNext: []
 --- !u!1 &304705633
@@ -521,6 +542,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 2057950824}
   alternateNext: []
 --- !u!1 &337120207
@@ -568,6 +592,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 1275973871}
   alternateNext: []
 --- !u!1 &339461349
@@ -615,6 +642,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 341736864}
   alternateNext: []
 --- !u!1 &341736862
@@ -662,6 +692,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 990838644}
   alternateNext: []
 --- !u!1 &351894946
@@ -709,6 +742,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 337120209}
   alternateNext: []
 --- !u!1 &354439016
@@ -796,7 +832,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 1659264540}
+  alternateNext: []
+--- !u!1 &373345292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373345293}
+  - component: {fileID: 373345294}
+  m_Layer: 0
+  m_Name: Exit3
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &373345293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373345292}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.65451, y: -1.66054, z: 0}
+  m_LocalScale: {x: 0.78198, y: 0.78198, z: 0.78198}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 260829698}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &373345294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373345292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8090df53711c3542807587b9067422b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PathPoint
+  isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 0}
+  defaultNext: {fileID: 0}
   alternateNext: []
 --- !u!1 &401220876
 GameObject:
@@ -828,6 +917,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 2129453495}
   alternateNext: []
 --- !u!4 &401220878
@@ -890,6 +982,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 1848065456}
   alternateNext: []
 --- !u!1 &463042301
@@ -937,6 +1032,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 411130705}
   alternateNext: []
 --- !u!1 &486592655
@@ -984,6 +1082,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 264878364}
   alternateNext: []
 --- !u!1 &514506204
@@ -1216,6 +1317,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 0}
   alternateNext:
   - {fileID: 2002567551}
@@ -1250,6 +1354,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 165405562}
   alternateNext: []
 --- !u!4 &537472213
@@ -1381,6 +1488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 739957493}
   alternateNext: []
 --- !u!4 &679092205
@@ -1428,6 +1538,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 537472212}
   alternateNext: []
 --- !u!4 &739957494
@@ -1490,6 +1603,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 84983488}
   alternateNext: []
 --- !u!1 &843473125
@@ -1537,6 +1653,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 854279870}
   alternateNext: []
 --- !u!1 &854279868
@@ -1584,6 +1703,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 2003227638}
   alternateNext: []
 --- !u!1 &875960035
@@ -1631,6 +1753,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 1833294164}
   alternateNext: []
 --- !u!1 &912543030
@@ -1678,6 +1803,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 843473127}
   alternateNext: []
 --- !u!1 &968840739
@@ -1725,6 +1853,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 0}
   alternateNext: []
 --- !u!1 &990838642
@@ -1772,6 +1903,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 798559994}
   alternateNext: []
 --- !u!1 &1057714751
@@ -1820,6 +1954,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 1
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 0}
   defaultNext: {fileID: 1941104214}
   alternateNext: []
 --- !u!114 &1057714754
@@ -1880,6 +2017,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 304705635}
   alternateNext: []
 --- !u!1 &1169049808
@@ -1926,6 +2066,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 1
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 0}
   defaultNext: {fileID: 535472014}
   alternateNext: []
 --- !u!4 &1169049811
@@ -1988,6 +2131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 0}
   defaultNext: {fileID: 2077425553}
   alternateNext: []
 --- !u!1 &1308517196
@@ -2035,7 +2181,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 486592657}
+  alternateNext: []
+--- !u!1 &1334040308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334040309}
+  - component: {fileID: 1334040310}
+  m_Layer: 0
+  m_Name: Exit2
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1334040309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334040308}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.65451, y: 0.90946, z: 0}
+  m_LocalScale: {x: 0.78198, y: 0.78198, z: 0.78198}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 260829698}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1334040310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334040308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8090df53711c3542807587b9067422b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PathPoint
+  isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 0}
+  defaultNext: {fileID: 0}
   alternateNext: []
 --- !u!1 &1372241302
 GameObject:
@@ -2082,6 +2281,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 243385739}
   alternateNext: []
 --- !u!1 &1443552619
@@ -2129,6 +2331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 1597046718}
   alternateNext: []
 --- !u!1 &1490302435
@@ -2176,6 +2381,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 463042303}
   alternateNext: []
 --- !u!1 &1490963149
@@ -2271,6 +2479,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 1123023538}
   alternateNext: []
 --- !u!1 &1519647591
@@ -2318,6 +2529,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 2017183287}
   alternateNext: []
 --- !u!1 &1597046716
@@ -2365,6 +2579,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 0}
   alternateNext: []
 --- !u!1 &1636588051
@@ -2545,6 +2762,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 0}
   alternateNext: []
 --- !u!1 &1776861943
@@ -2592,6 +2812,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 1824462752}
   alternateNext: []
 --- !u!1 &1788889347
@@ -2638,6 +2861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 1
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 0}
   defaultNext: {fileID: 875960037}
   alternateNext: []
 --- !u!4 &1788889350
@@ -2666,6 +2892,7 @@ GameObject:
   - component: {fileID: 1803037561}
   - component: {fileID: 1803037560}
   - component: {fileID: 1803037562}
+  - component: {fileID: 1803037563}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -2775,6 +3002,70 @@ MonoBehaviour:
   Enemiespersecond: 0.5
   timeBetweenWaves: 5
   difficultyFactor: 7.5
+--- !u!114 &1803037563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803037559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54d91a1b9d7c3844ae7c6f1d4571f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerBehaviour
+  customerPrefab: {fileID: 3542160651926385311, guid: 3d73484259d2b2f4baa1b6706fba2cb1, type: 3}
+  customerCount: 12
+  seatOffset: {x: 0, y: -0.5, z: 0}
+  seats:
+  - {fileID: 1941104214}
+  - {fileID: 339461351}
+  - {fileID: 341736864}
+  - {fileID: 990838644}
+  - {fileID: 798559994}
+  - {fileID: 84983488}
+  - {fileID: 1776861945}
+  - {fileID: 1824462752}
+  - {fileID: 1308517198}
+  - {fileID: 486592657}
+  - {fileID: 264878364}
+  - {fileID: 1490302437}
+  - {fileID: 463042303}
+  - {fileID: 411130705}
+  - {fileID: 1848065456}
+  - {fileID: 968840741}
+  - {fileID: 401220877}
+  - {fileID: 2129453495}
+  - {fileID: 679092204}
+  - {fileID: 739957493}
+  - {fileID: 537472212}
+  - {fileID: 165405562}
+  - {fileID: 197256377}
+  - {fileID: 28423628}
+  - {fileID: 875960037}
+  - {fileID: 1833294164}
+  - {fileID: 1508585201}
+  - {fileID: 1123023538}
+  - {fileID: 304705635}
+  - {fileID: 2057950824}
+  - {fileID: 356633539}
+  - {fileID: 1659264540}
+  - {fileID: 535472014}
+  - {fileID: 2002567551}
+  - {fileID: 912543032}
+  - {fileID: 843473127}
+  - {fileID: 854279870}
+  - {fileID: 2003227638}
+  - {fileID: 1372241304}
+  - {fileID: 243385739}
+  - {fileID: 1519647593}
+  - {fileID: 2017183287}
+  - {fileID: 351894948}
+  - {fileID: 337120209}
+  - {fileID: 1275973871}
+  - {fileID: 2077425553}
+  - {fileID: 1443552621}
+  - {fileID: 1597046718}
 --- !u!1 &1824462750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,6 +3111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 0}
   alternateNext: []
 --- !u!1 &1833294162
@@ -2867,6 +3161,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 1508585201}
   alternateNext: []
 --- !u!1 &1843232895
@@ -2900,6 +3197,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 1
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 0}
   defaultNext: {fileID: 401220877}
   alternateNext: []
 --- !u!4 &1843232897
@@ -2975,6 +3275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 968840741}
   alternateNext: []
 --- !u!1 &1941104212
@@ -3022,10 +3325,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 0}
   alternateNext:
   - {fileID: 339461351}
   - {fileID: 1308517198}
+--- !u!1 &1954047301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954047302}
+  - component: {fileID: 1954047303}
+  m_Layer: 0
+  m_Name: Exit1
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1954047302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954047301}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.65451, y: 3.24946, z: 0}
+  m_LocalScale: {x: 0.78198, y: 0.78198, z: 0.78198}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 260829698}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954047303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954047301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8090df53711c3542807587b9067422b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PathPoint
+  isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 0}
+  defaultNext: {fileID: 0}
+  alternateNext: []
 --- !u!1 &1960169214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,6 +3506,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 912543032}
   alternateNext: []
 --- !u!1 &2003227636
@@ -3197,6 +3556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1954047302}
   defaultNext: {fileID: 1372241304}
   alternateNext: []
 --- !u!1 &2017183285
@@ -3244,6 +3606,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 351894948}
   alternateNext: []
 --- !u!1 &2057950822
@@ -3291,6 +3656,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 356633539}
   alternateNext: []
 --- !u!1 &2077425551
@@ -3338,6 +3706,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 1334040309}
   defaultNext: {fileID: 1443552621}
   alternateNext: []
 --- !u!1 &2129453494
@@ -3370,6 +3741,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PathPoint
   isOccupied: 0
+  Used: 0
+  Spoiled: 0
+  laneExit: {fileID: 373345293}
   defaultNext: {fileID: 679092204}
   alternateNext: []
 --- !u!4 &2129453496

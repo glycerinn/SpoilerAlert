@@ -30,11 +30,7 @@ public class EnemyMovement : MonoBehaviour
                 stopped = true;
                 rb.linearVelocity = Vector2.zero;
 
-                target.isOccupied = true;
-                claimed = target;
-                stopped = true;
-
-                enemyBehaviour.showSpoilerBar();
+                enemyBehaviour.showSpoilerBar(claimed);
 
                 return;
             }
