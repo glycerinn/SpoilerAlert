@@ -16,11 +16,12 @@ public class EnemyBehaviour : MonoBehaviour
     private Slider SpoilerSlider;
     private Coroutine SpoilerRoutine;
     private PathPoint pathPoint;
+    private Bullets ammo;
 
     public void Awake()
     {
         CurrentHealth = EnemySO.MaxEnemyHealth;
-
+        ammo = FindAnyObjectByType<Bullets>();
         SpoilerBarInstance = Instantiate(
             SpoilerBarPrefab,
             transform.position + SpoilerBarOffset,
@@ -43,8 +44,15 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-    public void OnMouseDown()
+    private void OnMouseDown()
     {
+        if (ammo == null)
+            return;
+
+        if (!ammo.CanConsumeAmmo())
+            return;
+
+        ammo.ConsumeAmmo();
         takeDamage(1);
     }
 
