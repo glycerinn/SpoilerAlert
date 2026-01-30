@@ -39,6 +39,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if(CurrentHealth <= 0)
         {
+            EnemySpawner.onEnemyDestroy.Invoke();
             StopSpoiler();
             Destroy(gameObject);
         }

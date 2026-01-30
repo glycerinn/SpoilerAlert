@@ -3014,10 +3014,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   enemyPrefabs:
   - {fileID: 6962868729953710995, guid: 073924fc8c952d84baae313ac49b13d9, type: 3}
-  baseEnemies: 16
+  baseEnemies: 8
   Enemiespersecond: 0.5
   timeBetweenWaves: 5
-  difficultyFactor: 7.5
+  difficultyFactor: 0.75
 --- !u!114 &1803037563
 MonoBehaviour:
   m_ObjectHideFlags: 0
