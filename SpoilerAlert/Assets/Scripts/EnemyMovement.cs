@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (Vector2.Distance(transform.position, target.transform.position) <= 0.1f)
         {
-            if (!target.isOccupied)
+            if (target.isSeat && !target.isOccupied)
             {
                 target.isOccupied = true;
                 claimed = target;
