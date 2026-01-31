@@ -30,7 +30,7 @@ public class WaveManager : MonoBehaviour
             spawner.ConfigureWave(wave);
             spawner.StartSpawn();
 
-            Debug.Log("wave " + currentWaveIndex);
+            Debug.Log("wave " + (currentWaveIndex + 1));
 
             yield return new WaitUntil(() => spawner.IsWaveFinished());
 

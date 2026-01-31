@@ -21,4 +21,4 @@ MonoBehaviour:
   StrongspawnStop: 0
   waveDuration: 60
   enemyPrefabs:
-  - {fileID: 6962868729953710995, guid: 073924fc8c952d84baae313ac49b13d9, type: 3}
+  - {fileID: 6962868729953710995, guid: 291470203e0240046a473f09cbfd6e0f, type: 3}
