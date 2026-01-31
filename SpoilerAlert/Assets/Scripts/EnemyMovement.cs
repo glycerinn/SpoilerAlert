@@ -3,7 +3,6 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float moveSpeed = 2f;
 
     private PathPoint target;
     private PathPoint claimed;
@@ -67,7 +66,7 @@ public class EnemyMovement : MonoBehaviour
         }
 
         Vector2 direction = (target.transform.position - transform.position).normalized;
-        rb.linearVelocity = direction * moveSpeed;
+        rb.linearVelocity = direction * enemyBehaviour.EnemySO.EnemySpeed;
     }
 
     private void OnDestroy()

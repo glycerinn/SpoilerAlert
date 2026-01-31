@@ -42,7 +42,9 @@ public class EnemySpawner : MonoBehaviour
         if(!isSpawning||currentWave == null) return;
         timer += Time.deltaTime;
 
-        if(timer >= currentWave.spawnStop)
+        if(timer >= currentWave.spawnStop
+        && timer >= currentWave.FastspawnStop 
+        && timer >= currentWave.StrongspawnStop)
         {
             isSpawning = false;
             return;
@@ -50,7 +52,9 @@ public class EnemySpawner : MonoBehaviour
 
         spawnTimer += Time.deltaTime;
 
-        if(spawnTimer >= currentWave.spawnRate)
+        if(spawnTimer >= currentWave.spawnRate
+        && spawnTimer >= currentWave.StrongspawnRate
+        && spawnTimer >= currentWave.FastspawnRate)
         {
             SpawnEnemy();
             spawnTimer = 0;

@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0a95784da066d943808e5e33c93f217, type: 3}
-  m_Name: Wave3
+  m_Name: Wave8
   m_EditorClassIdentifier: Assembly-CSharp::WaveDataSO
-  waveName: Wave 3
+  waveName: Wave 8
   spawnRate: 1
-  spawnStop: 10
-  FastspawnRate: 2
-  FastspawnStop: 8
+  spawnStop: 20
+  FastspawnRate: 1
+  FastspawnStop: 16
   StrongspawnRate: 0
   StrongspawnStop: 0
-  waveDuration: 30
+  waveDuration: 45
   enemyPrefabs:
   - {fileID: 6962868729953710995, guid: 073924fc8c952d84baae313ac49b13d9, type: 3}
   - {fileID: 6962868729953710995, guid: 226531cf53e4c1441af0acd98466568e, type: 3}
+  - {fileID: 6962868729953710995, guid: 85f4d0fcf37402048b6928e59f01558f, type: 3}

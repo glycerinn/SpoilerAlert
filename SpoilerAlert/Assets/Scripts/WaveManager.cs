@@ -9,7 +9,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private WaveDataSO[] waves;
     [SerializeField] private EnemySpawner spawner;
 
-    private int currentWaveIndex = -1;
+    private int currentWaveIndex = 0;
 
     private void Awake()
     {
@@ -18,29 +18,19 @@ public class WaveManager : MonoBehaviour
 
     private void Start()
     {
-        StartNextWave();
+        StartCoroutine(RunWave());
     }
 
-    public void StartNextWave()
-    {
-        currentWaveIndex++;
-
-        if(currentWaveIndex >= waves.Length)
-        {
-            Debug.Log("all done");
-            return;
-        }
-
-        StartCoroutine(RunWave(waves[currentWaveIndex]));
-
-    }
-
-    private IEnumerator RunWave(WaveDataSO wave)
+    private IEnumerator RunWave()
     {
         while (currentWaveIndex < waves.Length)
         {
+            WaveDataSO wave = waves[currentWaveIndex];
+
             spawner.ConfigureWave(wave);
             spawner.StartSpawn();
+
+            Debug.Log("wave " + currentWaveIndex);
 
             yield return new WaitUntil(() => spawner.IsWaveFinished());
 
@@ -48,7 +38,7 @@ public class WaveManager : MonoBehaviour
 
             yield return new WaitForSeconds(3f);
 
-            StartNextWave();
+            currentWaveIndex++;
         }
     }
 }
