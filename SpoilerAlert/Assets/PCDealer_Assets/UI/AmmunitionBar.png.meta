@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 9dee6dded8a776149b2e59a51f095678
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8216522577569777045
+    second: AmmunitionBar_0
+  - first:
+      213: -1404521026457187691
+    second: AmmunitionBar_1
+  - first:
+      213: 5458215599020088254
+    second: AmmunitionBar_2
+  - first:
+      213: 8205225962277297285
+    second: AmmunitionBar_3
+  - first:
+      213: 2365253137066723647
+    second: AmmunitionBar_4
+  - first:
+      213: -7448486410240257419
+    second: AmmunitionBar_5
+  - first:
+      213: -8063411947621128160
+    second: AmmunitionBar_6
+  - first:
+      213: 6062413355484982305
+    second: AmmunitionBar_7
+  - first:
+      213: 1342931260906387740
+    second: AmmunitionBar_8
+  - first:
+      213: 7219192239830796000
+    second: AmmunitionBar_9
+  - first:
+      213: -9102847180367325460
+    second: AmmunitionBar_10
+  - first:
+      213: -7405830966517679132
+    second: AmmunitionBar_11
+  - first:
+      213: 7320574442324181627
+    second: AmmunitionBar_12
+  - first:
+      213: -5053198191460140663
+    second: AmmunitionBar_13
+  - first:
+      213: -2555811887145333767
+    second: AmmunitionBar_14
+  - first:
+      213: 1850995915991538176
+    second: AmmunitionBar_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AmmunitionBar_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 405
+        width: 634
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 595060550c3f60270800000000000000
+      internalID: 8216522577569777045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 425
+        width: 642
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ac3726193228ce0800000000000000
+      internalID: -1404521026457187691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_2
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 401
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb961f1b2a7fbb40800000000000000
+      internalID: 5458215599020088254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_3
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 404
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58cd95f1a81ded170800000000000000
+      internalID: 8205225962277297285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 387
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f398dbe423113d020800000000000000
+      internalID: 2365253137066723647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_5
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 388
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5721e4bd219a1a890800000000000000
+      internalID: -7448486410240257419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 389
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028e6603e81091090800000000000000
+      internalID: -8063411947621128160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_7
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 390
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c2447a3d4022450800000000000000
+      internalID: 6062413355484982305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_8
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 391
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19b71cdddc03a210800000000000000
+      internalID: 1342931260906387740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_9
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 393
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e60f5cd719bf2460800000000000000
+      internalID: 7219192239830796000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_10
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 396
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce61a89e7b03ca180800000000000000
+      internalID: -9102847180367325460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_11
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 397
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb302649f3393990800000000000000
+      internalID: -7405830966517679132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_12
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 399
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7249825ba7e79560800000000000000
+      internalID: 7320574442324181627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_13
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 400
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9893f52940f6fd9b0800000000000000
+      internalID: -5053198191460140663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_14
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 402
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb4bf141aee78cd0800000000000000
+      internalID: -2555811887145333767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AmmunitionBar_15
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 403
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00adf558afe00b910800000000000000
+      internalID: 1850995915991538176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AmmunitionBar_0: 8216522577569777045
+      AmmunitionBar_1: -1404521026457187691
+      AmmunitionBar_10: -9102847180367325460
+      AmmunitionBar_11: -7405830966517679132
+      AmmunitionBar_12: 7320574442324181627
+      AmmunitionBar_13: -5053198191460140663
+      AmmunitionBar_14: -2555811887145333767
+      AmmunitionBar_15: 1850995915991538176
+      AmmunitionBar_2: 5458215599020088254
+      AmmunitionBar_3: 8205225962277297285
+      AmmunitionBar_4: 2365253137066723647
+      AmmunitionBar_5: -7448486410240257419
+      AmmunitionBar_6: -8063411947621128160
+      AmmunitionBar_7: 6062413355484982305
+      AmmunitionBar_8: 1342931260906387740
+      AmmunitionBar_9: 7219192239830796000
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
