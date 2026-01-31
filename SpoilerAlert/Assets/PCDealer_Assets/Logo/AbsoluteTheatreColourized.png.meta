@@ -130,41 +130,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AbsoluteTheatreColourized_0
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 319
-        width: 441
-        height: 370
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 265fa5da0af59a2f0800000000000000
-      internalID: -961131901759064734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: AbsoluteTheatreColourized_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 689
-        width: 36
-        height: 70
+        x: 4
+        y: 304
+        width: 1076
+        height: 474
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -177,143 +168,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: AbsoluteTheatreColourized_2
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 689
-        width: 77
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d95c88bbee0051ba0800000000000000
-      internalID: -6118983493364431459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AbsoluteTheatreColourized_3
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 515
-        width: 628
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c3662ab641da15090800000000000000
-      internalID: -8047460755917609412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AbsoluteTheatreColourized_4
-      rect:
-        serializedVersion: 2
-        x: 449
-        y: 319
-        width: 101
-        height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15e6fd0ca934cd900800000000000000
-      internalID: 710517173157588561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AbsoluteTheatreColourized_5
-      rect:
-        serializedVersion: 2
-        x: 558
-        y: 344
-        width: 193
-        height: 170
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 142662f4ec8f9aea0800000000000000
-      internalID: -5860879875071122879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AbsoluteTheatreColourized_6
-      rect:
-        serializedVersion: 2
-        x: 735
-        y: 319
-        width: 199
-        height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 474ec0a1ba36258f0800000000000000
-      internalID: -553270217685539724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AbsoluteTheatreColourized_7
-      rect:
-        serializedVersion: 2
-        x: 937
-        y: 344
-        width: 133
-        height: 170
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6060e36e255e72700800000000000000
-      internalID: 515632826570114566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 187a086fa8aebf14b9490c562f4911b7
     internalID: 0
     vertices: []
     indices: 

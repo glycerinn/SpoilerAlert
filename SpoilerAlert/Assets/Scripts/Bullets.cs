@@ -27,7 +27,7 @@ public class Bullets : MonoBehaviour
             ShootGun();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isReloading)
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
         {
             StartCoroutine(ReloadAmmo());
         }
