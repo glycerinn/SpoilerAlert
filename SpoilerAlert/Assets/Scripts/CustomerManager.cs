@@ -8,6 +8,14 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private Vector3 seatOffset = new Vector3(0, -0.5f, 0);
     [SerializeField] private PathPoint[] seats;
 
+    private void Awake()
+    {
+        foreach (var seat in seats)
+        {
+            seat.Used = false;
+        }
+    }
+
     private void Start()
     {
         SpawnCustomers();
@@ -22,10 +30,10 @@ public class CustomerManager : MonoBehaviour
             if (!seat.Used)
                 AvailableSeats.Add(seat);
         }
+        
+        int spawnCount = Mathf.Min(12, AvailableSeats.Count);
 
-        int count = Mathf.Min(customerCount, AvailableSeats.Count);
-
-        for(int i = 0; i < count; i++)
+        for(int i = 0; i < spawnCount; i++)
         {
             int rand = Random.Range(0, AvailableSeats.Count);
             PathPoint seat = AvailableSeats[rand];
@@ -34,9 +42,7 @@ public class CustomerManager : MonoBehaviour
             Vector3 SpawnPos = seat.transform.position + seatOffset;
 
             GameObject customer = Instantiate(customerPrefab, SpawnPos, Quaternion.identity, transform);
-            CustomerMovement movement = customer.GetComponent<CustomerMovement>();
-
-            if (movement != null)
+            if (customer.TryGetComponent(out CustomerMovement movement))
             {
                 movement.AssignSeat(seat);
             }

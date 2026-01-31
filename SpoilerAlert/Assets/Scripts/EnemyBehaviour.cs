@@ -53,8 +53,6 @@ public class EnemyBehaviour : MonoBehaviour
         if (!ammo.CanConsumeAmmo())
             return;
 
-        ammo.ShootGun();
-        ammo.ConsumeAmmo();
         takeDamage(1);
     }
 

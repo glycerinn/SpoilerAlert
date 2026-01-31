@@ -1,18 +1,22 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bullets : MonoBehaviour
 {
     [SerializeField] private int MaxAmmo = 20;
     [SerializeField] private int CurrentAmmo;
     [SerializeField] private float ReloadTime = 1f;
+    [SerializeField] private Slider AmmoBar;
 
     public Animator animator;
     private bool isReloading;
 
     private void Start()
-    {
+    {   
         CurrentAmmo = MaxAmmo;
+        AmmoBar.maxValue = MaxAmmo;
+        AmmoBar.value = CurrentAmmo;
     }
 
     private void Update()
@@ -27,6 +31,8 @@ public class Bullets : MonoBehaviour
         {
             StartCoroutine(ReloadAmmo());
         }
+
+        AmmoBar.value = CurrentAmmo;
     }
 
     public bool CanConsumeAmmo()
