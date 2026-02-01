@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 7f33d4a7ea71cc9408e1c575cf3edbe0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2310791239145345198
+    second: AbsoluteTheatreFocusBar_0
+  - first:
+      213: 1763691974619991127
+    second: AbsoluteTheatreFocusBar_1
+  - first:
+      213: 9184785209735595691
+    second: AbsoluteTheatreFocusBar_2
+  - first:
+      213: 342015540437171816
+    second: AbsoluteTheatreFocusBar_3
+  - first:
+      213: -8140393437670159594
+    second: AbsoluteTheatreFocusBar_4
+  - first:
+      213: -1089298260859806925
+    second: AbsoluteTheatreFocusBar_5
+  - first:
+      213: 6316396443039701169
+    second: AbsoluteTheatreFocusBar_6
+  - first:
+      213: 6513162162731124657
+    second: AbsoluteTheatreFocusBar_7
+  - first:
+      213: 6572683073119570612
+    second: AbsoluteTheatreFocusBar_8
+  - first:
+      213: 504447260091741899
+    second: AbsoluteTheatreFocusBar_9
+  - first:
+      213: 7570714181018190377
+    second: AbsoluteTheatreFocusBar_10
+  - first:
+      213: 8533888062677011604
+    second: AbsoluteTheatreFocusBar_11
+  - first:
+      213: -1037629286224390266
+    second: AbsoluteTheatreFocusBar_12
+  - first:
+      213: -6926550137863982971
+    second: AbsoluteTheatreFocusBar_13
+  - first:
+      213: -5479143069251640897
+    second: AbsoluteTheatreFocusBar_14
+  - first:
+      213: -5477221771073882637
+    second: AbsoluteTheatreFocusBar_15
+  - first:
+      213: -4312842389389660841
+    second: AbsoluteTheatreFocusBar_16
+  - first:
+      213: -233172706195874886
+    second: AbsoluteTheatreFocusBar_17
+  - first:
+      213: 7706860801752024404
+    second: AbsoluteTheatreFocusBar_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 384
+        width: 566
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f28a07c9b6eefd0800000000000000
+      internalID: -2310791239145345198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_1
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 506
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c8e68a184e97810800000000000000
+      internalID: 1763691974619991127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 388
+        width: 496
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba64d843c79e67f70800000000000000
+      internalID: 9184785209735595691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_3
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 388
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ebb6b62551fb400800000000000000
+      internalID: 342015540437171816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_4
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 334
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61bcfbf4c43870f80800000000000000
+      internalID: -8140393437670159594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 335
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b100bc00902e0f0800000000000000
+      internalID: -1089298260859806925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_6
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 337
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b81ce7691958a750800000000000000
+      internalID: 6316396443039701169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_7
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 338
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b78a129a76636a50800000000000000
+      internalID: 6513162162731124657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_8
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 339
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bac3827e6cd63b50800000000000000
+      internalID: 6572683073119570612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_9
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 342
+        width: 51
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6ffa14c18200700800000000000000
+      internalID: 504447260091741899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_10
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 344
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9220a9faf64901960800000000000000
+      internalID: 7570714181018190377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_11
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 347
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c4fc08af57e6670800000000000000
+      internalID: 8533888062677011604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_12
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 348
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6879d0a69a99991f0800000000000000
+      internalID: -1037629286224390266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_13
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 350
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5803fa91953ffdf90800000000000000
+      internalID: -6926550137863982971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_14
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 352
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb166b3886c26f3b0800000000000000
+      internalID: -5479143069251640897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_15
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 353
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5fa1b91dffcf3b0800000000000000
+      internalID: -5477221771073882637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_16
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 354
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75dae2082b4b524c0800000000000000
+      internalID: -4312842389389660841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_17
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 355
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abbd0ebb8aa93ccf0800000000000000
+      internalID: -233172706195874886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AbsoluteTheatreFocusBar_18
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 357
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455cfc5011544fa60800000000000000
+      internalID: 7706860801752024404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AbsoluteTheatreFocusBar_0: -2310791239145345198
+      AbsoluteTheatreFocusBar_1: 1763691974619991127
+      AbsoluteTheatreFocusBar_10: 7570714181018190377
+      AbsoluteTheatreFocusBar_11: 8533888062677011604
+      AbsoluteTheatreFocusBar_12: -1037629286224390266
+      AbsoluteTheatreFocusBar_13: -6926550137863982971
+      AbsoluteTheatreFocusBar_14: -5479143069251640897
+      AbsoluteTheatreFocusBar_15: -5477221771073882637
+      AbsoluteTheatreFocusBar_16: -4312842389389660841
+      AbsoluteTheatreFocusBar_17: -233172706195874886
+      AbsoluteTheatreFocusBar_18: 7706860801752024404
+      AbsoluteTheatreFocusBar_2: 9184785209735595691
+      AbsoluteTheatreFocusBar_3: 342015540437171816
+      AbsoluteTheatreFocusBar_4: -8140393437670159594
+      AbsoluteTheatreFocusBar_5: -1089298260859806925
+      AbsoluteTheatreFocusBar_6: 6316396443039701169
+      AbsoluteTheatreFocusBar_7: 6513162162731124657
+      AbsoluteTheatreFocusBar_8: 6572683073119570612
+      AbsoluteTheatreFocusBar_9: 504447260091741899
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
