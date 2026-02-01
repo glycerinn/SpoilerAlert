@@ -27,12 +27,16 @@ public class WaveManager : MonoBehaviour
         {
             WaveDataSO wave = waves[currentWaveIndex];
 
+            Debug.Log("Starting wave " + currentWaveIndex);
+
             spawner.ConfigureWave(wave);
             spawner.StartSpawn();
 
             Debug.Log("wave " + (currentWaveIndex + 1));
 
             yield return new WaitUntil(() => spawner.IsWaveFinished());
+
+            Debug.Log("Wave " + currentWaveIndex + " finished");
 
             spawner.StopSpawning();
 

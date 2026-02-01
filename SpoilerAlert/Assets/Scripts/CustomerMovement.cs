@@ -5,7 +5,8 @@ public class CustomerMovement : MonoBehaviour
 {
     private PathPoint seat;
     private bool leaving;
-
+    private bool hasLeft = false;
+    
     [SerializeField] private float moveTime = 0.8f;
 
     public void AssignSeat(PathPoint seatPoint)
@@ -27,12 +28,18 @@ public class CustomerMovement : MonoBehaviour
 
     private IEnumerator LeaveSequence()
     {
+        if (hasLeft) yield break;
+            hasLeft = true;
+
         yield return MoveTo(seat.transform.position);
 
         if (seat.laneExit != null)
             yield return MoveTo(seat.laneExit.position);
 
         seat.Used = false;
+
+        CustomerManager.Instance.CustomerLeft();
+
         Destroy(gameObject);
     }
 

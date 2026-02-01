@@ -4,17 +4,6 @@ using UnityEngine;
 public class WaveDataSO : ScriptableObject
 {
     public string waveName;
-
-    public float spawnRate;
-    public float spawnStop;     
-
-    public float FastspawnRate;
-    public float FastspawnStop; 
-
-    public float StrongspawnRate;
-    public float StrongspawnStop; 
-    public float waveDuration;  
-    
-
-    public GameObject[] enemyPrefabs;
+    public EnemySpawnData[] enemyTypes;
+    public float waveDuration;
 }

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Wave1
   m_EditorClassIdentifier: Assembly-CSharp::WaveDataSO
   waveName: Wave 1
-  spawnRate: 2
+  enemyTypes:
+  - prefabs:
+    - {fileID: 6962868729953710995, guid: 073924fc8c952d84baae313ac49b13d9, type: 3}
+    spawnRate: 2
+    stopTime: 16
   waveDuration: 30
-  spawnStop: 16
-  enemyPrefabs:
-  - {fileID: 6962868729953710995, guid: 073924fc8c952d84baae313ac49b13d9, type: 3}

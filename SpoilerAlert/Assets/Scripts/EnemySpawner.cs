@@ -7,9 +7,11 @@ public class EnemySpawner : MonoBehaviour
 {
     private WaveDataSO currentWave;
     private float timer;
-    private float spawnTimer;
     private int enemiesAlive;
     private bool isSpawning = false;
+    private bool waveActive;
+
+    private float[] spawnTimers;
 
     public static UnityEvent onEnemyDestroy = new UnityEvent();
 
@@ -17,9 +19,12 @@ public class EnemySpawner : MonoBehaviour
     {
         currentWave = wave;
         timer = 0f;
-        spawnTimer = 0f;
         enemiesAlive = 0;
-        
+
+        spawnTimers = new float[wave.enemyTypes.Length];
+
+        waveActive = true;
+        isSpawning = true;
     }
 
     public void StartSpawn()
@@ -34,54 +39,102 @@ public class EnemySpawner : MonoBehaviour
 
     private void Awake()
     {
+        onEnemyDestroy.RemoveAllListeners();
         onEnemyDestroy.AddListener(EnemyDestroyed);
+        Debug.Log("EnemySpawner Awake: " + gameObject.name);
+        Debug.Log("EnemySpawner subscribed to onEnemyDestroy");
     }
 
     private void Update()
     {
-        if(!isSpawning||currentWave == null) return;
+        if(!waveActive||currentWave == null) return;
         timer += Time.deltaTime;
 
-        if(timer >= currentWave.spawnStop
-        && timer >= currentWave.FastspawnStop 
-        && timer >= currentWave.StrongspawnStop)
+        if (timer >= currentWave.waveDuration)
         {
+            EndWaveByTimeout();
             isSpawning = false;
+            waveActive = false; 
             return;
         }
 
-        spawnTimer += Time.deltaTime;
+        bool anyTypeStillSpawning = false;
 
-        if(spawnTimer >= currentWave.spawnRate
-        && spawnTimer >= currentWave.StrongspawnRate
-        && spawnTimer >= currentWave.FastspawnRate)
+        for (int i = 0; i < currentWave.enemyTypes.Length; i++)
         {
-            SpawnEnemy();
-            spawnTimer = 0;
+            EnemySpawnData type = currentWave.enemyTypes[i];
+
+            if (timer >= type.stopTime)
+                continue;
+
+            anyTypeStillSpawning = true;
+
+            spawnTimers[i] += Time.deltaTime;
+
+            if (spawnTimers[i] >= type.spawnRate)
+            {
+                SpawnEnemy(type);
+                spawnTimers[i] = 0f;
+            }
+        }
+
+        if (!anyTypeStillSpawning)
+            isSpawning = false;
+
+        if (!isSpawning && enemiesAlive <= 0)
+        {
+            Debug.Log("Wave fully cleared");
+            waveActive = false;
         }
     }
 
     private void EnemyDestroyed()
     {
         enemiesAlive--;
+        Debug.Log("Enemy destroyed, alive: " + enemiesAlive);
+
     }
 
-    private void SpawnEnemy()
+    private void SpawnEnemy(EnemySpawnData type)
     {
         enemiesAlive++;
 
-        int rand = Random.Range(0, LevelManager.main.spawns.Length);
-        SpawnPoint spawn = LevelManager.main.spawns[rand];
-        GameObject prefabtospawn = currentWave.enemyPrefabs[Random.Range(0, currentWave.enemyPrefabs.Length)];
+        Debug.Log("Enemy spawned, alive: " + enemiesAlive);
+
+        SpawnPoint spawn = LevelManager.main.spawns[
+        Random.Range(0, LevelManager.main.spawns.Length)
+        ];
+
+        GameObject prefab = type.prefabs[
+            Random.Range(0, type.prefabs.Length)
+        ];
+
         GameObject enemy = Instantiate(
-            prefabtospawn, 
-            spawn.transform.position, 
-            Quaternion.identity);
+            prefab,
+            spawn.transform.position,
+            Quaternion.identity
+        );
+
         enemy.GetComponent<EnemyMovement>().Init(spawn.entryPoint);
     }
 
     public bool IsWaveFinished()
     {
-        return !isSpawning && enemiesAlive <= 0;
+        return !waveActive && enemiesAlive <= 0;
     }
+
+    private void EndWaveByTimeout()
+    {
+        isSpawning = false;
+
+        EnemyMovement[] enemies =
+            Object.FindObjectsByType<EnemyMovement>(FindObjectsSortMode.None);
+
+        foreach (EnemyMovement enemy in enemies)
+        {
+            enemy.ForceExit();
+        }
+    }
+
+
 }

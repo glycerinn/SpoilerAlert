@@ -4,15 +4,21 @@ using UnityEngine;
 public class CustomerManager : MonoBehaviour
 {
     [SerializeField] private GameObject customerPrefab;
-    [SerializeField] private int customerCount = 12;
+    [SerializeField] private int customerCount;
     [SerializeField] private Vector3 seatOffset = new Vector3(0, -0.5f, 0);
     [SerializeField] private PathPoint[] seats;
+    [SerializeField] private GameObject GameOverPanel;
+
+    public static CustomerManager Instance;
+    private int customersRemaining;
 
     private void Awake()
     {
+        Instance = this;
         foreach (var seat in seats)
         {
             seat.Used = false;
+            seat.Spoiled = false;
         }
     }
 
@@ -23,7 +29,7 @@ public class CustomerManager : MonoBehaviour
 
     private void SpawnCustomers()
     {
-        List<PathPoint> AvailableSeats = new List<PathPoint>(seats);
+        List<PathPoint> AvailableSeats = new List<PathPoint>();
 
         foreach (var seat in seats)
         {
@@ -31,7 +37,8 @@ public class CustomerManager : MonoBehaviour
                 AvailableSeats.Add(seat);
         }
         
-        int spawnCount = Mathf.Min(12, AvailableSeats.Count);
+        int spawnCount = Mathf.Min(customerCount, AvailableSeats.Count);
+        customersRemaining = spawnCount;
 
         for(int i = 0; i < spawnCount; i++)
         {
@@ -50,4 +57,21 @@ public class CustomerManager : MonoBehaviour
             seat.Used = true;
         }
     }
+
+    public void CustomerLeft()
+    {
+        customersRemaining--;
+
+        if (customersRemaining <= 0)
+        {
+            GameOver();
+        }
+    }
+
+    public void GameOver()
+    {
+        GameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
 }
