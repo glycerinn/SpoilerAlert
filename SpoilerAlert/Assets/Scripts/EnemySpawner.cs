@@ -1,57 +1,87 @@
+using System.Collections;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] enemyPrefabs;
-
-    [SerializeField] private int baseEnemies = 8;
-    [SerializeField] private float Enemiespersecond = 0.5f;
-    [SerializeField] private float timeBetweenWaves = 5f;
-    [SerializeField] private float difficultyFactor = 7.5f;
-
-    private int currentWave = 1;
-    private float timeSinceLast;
+    private WaveDataSO currentWave;
+    private float timer;
+    private float spawnTimer;
     private int enemiesAlive;
-    private int enemiesLeft;
     private bool isSpawning = false;
 
-    private void Start()
+    public static UnityEvent onEnemyDestroy = new UnityEvent();
+
+    public void ConfigureWave(WaveDataSO wave)
     {
-        startWave();
+        currentWave = wave;
+        timer = 0f;
+        spawnTimer = 0f;
+        enemiesAlive = 0;
+        
+    }
+
+    public void StartSpawn()
+    {
+        isSpawning = true;
+    }
+
+    public void StopSpawning()
+    {
+        isSpawning = false;
+    }
+
+    private void Awake()
+    {
+        onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
     private void Update()
     {
-        if(!isSpawning) return;
-        timeSinceLast += Time.deltaTime;
+        if(!isSpawning||currentWave == null) return;
+        timer += Time.deltaTime;
 
-        if(timeSinceLast >= (1f / Enemiespersecond) && enemiesLeft > 0)
+        if(timer >= currentWave.spawnStop
+        && timer >= currentWave.FastspawnStop 
+        && timer >= currentWave.StrongspawnStop)
+        {
+            isSpawning = false;
+            return;
+        }
+
+        spawnTimer += Time.deltaTime;
+
+        if(spawnTimer >= currentWave.spawnRate
+        && spawnTimer >= currentWave.StrongspawnRate
+        && spawnTimer >= currentWave.FastspawnRate)
         {
             SpawnEnemy();
-            enemiesLeft--;
-            enemiesAlive++;
-            timeSinceLast = 0;
+            spawnTimer = 0;
         }
     }
 
-    private void startWave()
+    private void EnemyDestroyed()
     {
-        isSpawning = true;
-        enemiesLeft = enemiesPerWave();
+        enemiesAlive--;
     }
 
     private void SpawnEnemy()
     {
+        enemiesAlive++;
+
         int rand = Random.Range(0, LevelManager.main.spawns.Length);
         SpawnPoint spawn = LevelManager.main.spawns[rand];
-        GameObject prefabtospawn = enemyPrefabs[0];
-        GameObject enemy = Instantiate(prefabtospawn, spawn.transform.position, Quaternion.identity);
-        EnemyMovement movement = enemy.GetComponent<EnemyMovement>();
-        movement.Init(spawn.entryPoint);
+        GameObject prefabtospawn = currentWave.enemyPrefabs[Random.Range(0, currentWave.enemyPrefabs.Length)];
+        GameObject enemy = Instantiate(
+            prefabtospawn, 
+            spawn.transform.position, 
+            Quaternion.identity);
+        enemy.GetComponent<EnemyMovement>().Init(spawn.entryPoint);
     }
 
-    private int enemiesPerWave()
+    public bool IsWaveFinished()
     {
-        return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyFactor));
+        return !isSpawning && enemiesAlive <= 0;
     }
 }

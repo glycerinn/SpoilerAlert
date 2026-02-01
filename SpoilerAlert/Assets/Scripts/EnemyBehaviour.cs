@@ -39,6 +39,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if(CurrentHealth <= 0)
         {
+            EnemySpawner.onEnemyDestroy.Invoke();
             StopSpoiler();
             Destroy(gameObject);
         }
@@ -52,7 +53,6 @@ public class EnemyBehaviour : MonoBehaviour
         if (!ammo.CanConsumeAmmo())
             return;
 
-        ammo.ConsumeAmmo();
         takeDamage(1);
     }
 

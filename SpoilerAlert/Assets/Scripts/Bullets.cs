@@ -1,28 +1,41 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bullets : MonoBehaviour
 {
     [SerializeField] private int MaxAmmo = 20;
     [SerializeField] private int CurrentAmmo;
     [SerializeField] private float ReloadTime = 1f;
+    [SerializeField] private Slider AmmoBar;
 
+    public Animator animator;
     private bool isReloading;
 
     private void Start()
-    {
+    {   
         CurrentAmmo = MaxAmmo;
+        AmmoBar.maxValue = MaxAmmo;
+        AmmoBar.value = CurrentAmmo;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isReloading)
+        if(Input.GetMouseButtonDown(0) && CanConsumeAmmo())
+        {
+            ConsumeAmmo();
+            ShootGun();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
         {
             StartCoroutine(ReloadAmmo());
         }
+
+        AmmoBar.value = CurrentAmmo;
     }
 
-   public bool CanConsumeAmmo()
+    public bool CanConsumeAmmo()
     {
         return CurrentAmmo > 0 && !isReloading;
     }
@@ -43,5 +56,11 @@ public class Bullets : MonoBehaviour
 
         CurrentAmmo = MaxAmmo;
         isReloading = false;
+    }
+
+    public void ShootGun()
+    {
+        animator.ResetTrigger("Shoot");
+        animator.SetTrigger("Shoot");
     }
 }

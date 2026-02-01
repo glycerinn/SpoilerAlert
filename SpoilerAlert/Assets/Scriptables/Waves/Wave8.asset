@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a95784da066d943808e5e33c93f217, type: 3}
+  m_Name: Wave8
+  m_EditorClassIdentifier: Assembly-CSharp::WaveDataSO
+  waveName: Wave 8
+  spawnRate: 1
+  spawnStop: 20
+  FastspawnRate: 1
+  FastspawnStop: 16
+  StrongspawnRate: 1
+  StrongspawnStop: 12
+  waveDuration: 45
+  enemyPrefabs:
+  - {fileID: 6962868729953710995, guid: 567df5a4c6b4a2a468afbdb1cfc316de, type: 3}
+  - {fileID: 6962868729953710995, guid: 5b53a6904165c7041bf86e22fec53108, type: 3}
+  - {fileID: 6962868729953710995, guid: 85f4d0fcf37402048b6928e59f01558f, type: 3}

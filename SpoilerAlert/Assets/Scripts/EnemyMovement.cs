@@ -3,7 +3,6 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float moveSpeed = 2f;
 
     private PathPoint target;
     private PathPoint claimed;
@@ -21,13 +20,14 @@ public class EnemyMovement : MonoBehaviour
 
         if (stopped) return;
 
-        if (Vector2.Distance(transform.position, target.transform.position) <= 0.1f)
+        if ((transform.position - target.transform.position).sqrMagnitude <= 0.05f)
         {
-            if (!target.isOccupied)
+            if (target.isSeat && !target.isOccupied)
             {
                 target.isOccupied = true;
                 claimed = target;
                 stopped = true;
+                transform.position = target.transform.position;
                 rb.linearVelocity = Vector2.zero;
 
                 enemyBehaviour.showSpoilerBar(claimed);
@@ -67,7 +67,7 @@ public class EnemyMovement : MonoBehaviour
         }
 
         Vector2 direction = (target.transform.position - transform.position).normalized;
-        rb.linearVelocity = direction * moveSpeed;
+        rb.linearVelocity = direction * enemyBehaviour.EnemySO.EnemySpeed;
     }
 
     private void OnDestroy()
