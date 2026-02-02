@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     private PathPoint claimed;
     private bool stopped;
     public EnemyBehaviour enemyBehaviour;
+    public Vector3 exitPoint;
 
     private bool isLeaving = false;
     private Transform exitTarget;
@@ -37,7 +38,10 @@ public class EnemyMovement : MonoBehaviour
 
         if (target == null) return;
 
-        if (stopped) return;
+        if (stopped) {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
 
         if ((transform.position - target.transform.position).sqrMagnitude <= 0.05f)
         {
@@ -46,8 +50,9 @@ public class EnemyMovement : MonoBehaviour
                 target.isOccupied = true;
                 claimed = target;
                 stopped = true;
-                transform.position = target.transform.position;
                 rb.linearVelocity = Vector2.zero;
+
+                transform.position = target.transform.position + new Vector3(0f, 0.1f, 0f);
 
                 enemyBehaviour.showSpoilerBar(claimed);
 
@@ -81,18 +86,14 @@ public class EnemyMovement : MonoBehaviour
     {
         if (stopped)
         {
-            rb.linearVelocity = Vector2.zero;
-            return;
-        }
-
-        if (isLeaving)
-        {
-            rb.linearVelocity = Vector2.zero;
+            enemyBehaviour.UpdateAnimation(Vector2.zero);
             return;
         }
 
         Vector2 direction = (target.transform.position - transform.position).normalized;
         rb.linearVelocity = direction * enemyBehaviour.EnemySO.EnemySpeed;
+
+        enemyBehaviour.UpdateAnimation(direction);
     }
 
     private void OnDestroy()
@@ -112,7 +113,7 @@ public class EnemyMovement : MonoBehaviour
         isLeaving = true;
         stopped = false;
         target = null;
-
+        
         if (claimed != null)
         {
             claimed.isOccupied = false;

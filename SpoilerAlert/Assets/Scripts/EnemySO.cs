@@ -7,4 +7,5 @@ public class EnemySO : ScriptableObject
     public int MaxEnemyHealth;
     public float EnemySpeed;
     public float SpoilerSpeed;
+    public RuntimeAnimatorController animatorController;
 }

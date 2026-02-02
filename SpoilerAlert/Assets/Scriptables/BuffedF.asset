@@ -16,3 +16,4 @@ MonoBehaviour:
   MaxEnemyHealth: 2
   EnemySpeed: 14
   SpoilerSpeed: 1.5
+  animatorController: {fileID: 9100000, guid: bdb0bf4d6c778ad49885e4441c629839, type: 2}

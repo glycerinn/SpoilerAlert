@@ -10,16 +10,26 @@ public class EnemyBehaviour : MonoBehaviour
     public int CurrentHealth;
 
     [SerializeField] private GameObject SpoilerBarPrefab;
-    [SerializeField] private Vector3 SpoilerBarOffset = new Vector3(0, 0.5f, 0);
+    [SerializeField] private Vector3 SpoilerBarOffset = new Vector3(0, 0.6f, 0);
+    [SerializeField] private float deathAnimDuration = 0.6f;
+
+    private Animator animator;
 
     private GameObject SpoilerBarInstance;
     private Slider SpoilerSlider;
     private Coroutine SpoilerRoutine;
     private PathPoint pathPoint;
     private Bullets ammo;
+    private bool isDying;
+
+    private static readonly int MoveX = Animator.StringToHash("DirectionX");
+    private static readonly int MoveY = Animator.StringToHash("DirectionY");
+    private static readonly int Move = Animator.StringToHash("Moving");
 
     public void Awake()
     {
+        animator = GetComponent<Animator>();
+        animator.runtimeAnimatorController = EnemySO.animatorController;
         CurrentHealth = EnemySO.MaxEnemyHealth;
         ammo = FindAnyObjectByType<Bullets>();
         SpoilerBarInstance = Instantiate(
@@ -37,11 +47,9 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void Update()
     {
-        if(CurrentHealth <= 0)
+        if(CurrentHealth <= 0 && !isDying)
         {
-            EnemySpawner.onEnemyDestroy.Invoke();
-            StopSpoiler();
-            Destroy(gameObject);
+            Death();
         }
     }
 
@@ -102,5 +110,53 @@ public class EnemyBehaviour : MonoBehaviour
 
         SpoilerSlider.value = 0f;
         SpoilerBarInstance.SetActive(false);
+    }
+
+    public void UpdateAnimation(Vector2 direction)
+    {
+        if (direction.sqrMagnitude < 0.001f)
+        {
+            animator.SetBool(Move, false);
+            return;
+        }
+
+        animator.SetBool(Move, true);
+
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            animator.SetFloat(MoveX, Mathf.Sign(direction.x));
+            animator.SetFloat(MoveY, 0);
+        }
+        else
+        {
+            animator.SetFloat(MoveX, 0);
+            animator.SetFloat(MoveY, Mathf.Sign(direction.y));
+        }
+    }
+
+    private void Death()
+    {
+        isDying = true;
+
+        EnemySpawner.onEnemyDestroy.Invoke();
+        StopSpoiler();
+
+        animator.SetTrigger("Die");
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+
+        CircleCollider2D col = GetComponent<CircleCollider2D>();
+        if (col != null)
+            col.enabled = false;
+
+        StartCoroutine(DestroyAfterDeath());
+    }
+
+    private IEnumerator DestroyAfterDeath()
+    {
+        yield return new WaitForSeconds(deathAnimDuration);
+        Destroy(gameObject);
     }
 }
