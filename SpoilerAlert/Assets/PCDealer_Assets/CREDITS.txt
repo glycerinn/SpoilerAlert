@@ -1,0 +1,48 @@
+CREDITS
+
+"Throwing dices, slowed down, A" by Moulaythami
+-- https://freesound.org/s/550314/ --
+License: Attribution 4.0
+
+"Slow motion sound.wav" by karolist
+-- https://freesound.org/s/370632/ --
+License: Creative Commons 0
+
+"pistol reload sound.mp3" by GFL7
+-- https://freesound.org/s/276959/ --
+License: Creative Commons 0
+
+"mp7 reload sound.mp3" by GFL7
+-- https://freesound.org/s/276962/ --
+License: Creative Commons 0
+
+"Ripping a spiral bound notebook or a calendar page" by nomadas
+-- https://freesound.org/s/611718/ --
+License: Creative Commons 0
+
+"UI Button Presses" by NewHopeGames
+-- https://freesound.org/s/815844/ --
+License: Creative Commons 0
+
+“German Industrial Metal” by Bogart VGM,
+licensed under CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/
+Source: https://opengameart.org/content/german-industrial-metal
+Changes made: None
+
+Music by Tri-Tachyon - https://soundcloud.com/tri-tachyon/albums
+“Tri-Tachyon - (Heavy Metal Riffs - 4HR.DM8)” by Ellary (Tri-Tachyon), 
+licensed under CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/
+Source: https://opengameart.org/content/heavy-metal-riffs-4hrdm8
+Changes made: Edited to extend the music
+
+Music: “The Four Seasons – Summer (1st, 2nd, 3rd Movements)”
+Performed by John Harrison (violin),
+conducted by Robert Turizziani,
+The Wichita State University Chamber Players.
+Originally composed by Antonio Vivaldi.
+Licensed under CC BY-SA 4.0
+https://creativecommons.org/licenses/by-sa/4.0/
+Source: https://www.classicals.de/vivaldi-seasons
+Changes made: Applied filter to 1st movement; trimmed in-game. 
