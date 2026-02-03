@@ -6,7 +6,8 @@ public class CustomerMovement : MonoBehaviour
     private PathPoint seat;
     private bool leaving;
     private bool hasLeft = false;
-    
+
+    [SerializeField] private Animator animator;
     [SerializeField] private float moveTime = 0.8f;
 
     public void AssignSeat(PathPoint seatPoint)
@@ -22,6 +23,7 @@ public class CustomerMovement : MonoBehaviour
         if (!leaving && seat.Spoiled)
         {
             leaving = true;
+            animator.SetBool("Sit", false);
             StartCoroutine(LeaveSequence());
         }
     }

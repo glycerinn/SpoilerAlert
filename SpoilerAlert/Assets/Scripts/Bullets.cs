@@ -12,6 +12,13 @@ public class Bullets : MonoBehaviour
     public Animator animator;
     private bool isReloading;
 
+    private AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     private void Start()
     {   
         CurrentAmmo = MaxAmmo;
@@ -23,12 +30,14 @@ public class Bullets : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) && CanConsumeAmmo())
         {
+            audioManager.playGunshot();
             ConsumeAmmo();
             ShootGun();
         }
 
         if (Input.GetKeyDown(KeyCode.R) && !isReloading)
         {
+            audioManager.playReload();
             StartCoroutine(ReloadAmmo());
         }
 

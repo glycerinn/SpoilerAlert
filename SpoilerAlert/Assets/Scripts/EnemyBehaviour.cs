@@ -14,7 +14,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private float deathAnimDuration = 0.6f;
 
     private Animator animator;
-
+    private AudioManager audioManager;
     private GameObject SpoilerBarInstance;
     private Slider SpoilerSlider;
     private Coroutine SpoilerRoutine;
@@ -28,6 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         animator = GetComponent<Animator>();
         animator.runtimeAnimatorController = EnemySO.animatorController;
         CurrentHealth = EnemySO.MaxEnemyHealth;
@@ -61,6 +62,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (!ammo.CanConsumeAmmo())
             return;
 
+        audioManager.playHitSFX();
         takeDamage(1);
     }
 
