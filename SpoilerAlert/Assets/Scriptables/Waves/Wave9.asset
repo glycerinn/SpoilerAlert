@@ -17,5 +17,5 @@ MonoBehaviour:
   - prefabs:
     - {fileID: 6962868729953710995, guid: 291470203e0240046a473f09cbfd6e0f, type: 3}
     spawnRate: 1
-    stopTime: 1
+    stopTime: 2
   waveDuration: 60

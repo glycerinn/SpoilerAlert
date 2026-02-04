@@ -8,11 +8,37 @@ public class LevelManager : MonoBehaviour
     public PathPoint[] paths3;
     public PathPoint[] paths4;
     public SpawnPoint[] spawns;
+    public Transform[] exits;
+    private AudioManager audioManager;
     
 
     private void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         main = this;
+    }
 
+    public void Start()
+    {
+        audioManager.playGameBGM();
+        audioManager.ResetBGMState();
+    }
+
+    public Transform GetNearestExit(Vector3 from)
+    {
+        Transform closest = null;
+        float minDist = float.MaxValue;
+
+        foreach (var exit in exits)
+        {
+            float d = Vector3.Distance(from, exit.position);
+            if (d < minDist)
+            {
+                minDist = d;
+                closest = exit;
+            }
+        }
+
+        return closest;
     }
 }

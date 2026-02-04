@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
   name: Normal
   MaxEnemyHealth: 2
-  EnemySpeed: 7
+  EnemySpeed: 5
   SpoilerSpeed: 3
   animatorController: {fileID: 9100000, guid: 8ba66026b2561e24e85f336448e6c477, type: 2}

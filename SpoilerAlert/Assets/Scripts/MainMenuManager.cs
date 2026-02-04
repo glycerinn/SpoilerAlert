@@ -3,9 +3,33 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    private AudioManager audioManager;
+    public GameObject Credits;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
+    public void Start()
+    {
+        audioManager.playLobbyBGM();
+        Time.timeScale = 1f;
+    }
+
     public void SelectGameStage()
     {
         SceneManager.LoadScene("Stage Select");
+    }
+
+    public void CreditsShow()
+    {
+        Credits.SetActive(true);
+    }
+    
+    public void CreditsUnShow()
+    {
+        Credits.SetActive(false);
     }
 
     public void QuitGame()

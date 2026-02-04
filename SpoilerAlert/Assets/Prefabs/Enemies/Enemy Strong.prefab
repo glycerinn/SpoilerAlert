@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8052262797952035903}
   - component: {fileID: -8711810619576345434}
   - component: {fileID: 9046713328625864145}
+  - component: {fileID: 4102490578440070593}
   m_Layer: 0
   m_Name: Enemy Strong
   m_TagString: Untagged
@@ -85,8 +86,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.8156863, g: 0, b: 0.002820662, a: 1}
+  m_Sprite: {fileID: -2888908049072491233, guid: 8040cda182899a7468295143a4d6e0d8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -109,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   rb: {fileID: 8052262797952035903}
   enemyBehaviour: {fileID: -8711810619576345434}
+  exitPoint: {x: 0, y: 0, z: 0}
 --- !u!50 &8052262797952035903
 Rigidbody2D:
   serializedVersion: 5
@@ -151,7 +153,8 @@ MonoBehaviour:
   EnemySO: {fileID: 11400000, guid: db5c11b7e1fe1d040bfe631519560b56, type: 2}
   CurrentHealth: 4
   SpoilerBarPrefab: {fileID: 7952561924919687190, guid: 78f16c63137b7454288ae7a19577d7fb, type: 3}
-  SpoilerBarOffset: {x: 0, y: 0.5, z: 0}
+  SpoilerBarOffset: {x: 0, y: 0.6, z: 0}
+  deathAnimDuration: 0.6
 --- !u!58 &9046713328625864145
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -186,5 +189,27 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0.02428008, y: 0.033385187}
+  m_Radius: 0.5576653
+--- !u!95 &4102490578440070593
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962868729953710995}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3fc363c92263e1842810b6b1a5a33407, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
