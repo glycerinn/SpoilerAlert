@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     private AudioManager audioManager;
+    public GameObject Credits;
 
     public void Awake()
     {
@@ -19,6 +20,16 @@ public class MainMenuManager : MonoBehaviour
     public void SelectGameStage()
     {
         SceneManager.LoadScene("Stage Select");
+    }
+
+    public void CreditsShow()
+    {
+        Credits.SetActive(true);
+    }
+    
+    public void CreditsUnShow()
+    {
+        Credits.SetActive(false);
     }
 
     public void QuitGame()
