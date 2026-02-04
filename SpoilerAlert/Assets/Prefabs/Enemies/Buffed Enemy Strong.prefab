@@ -86,8 +86,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.61006284, g: 0.12469833, b: 0.12469833, a: 1}
+  m_Sprite: {fileID: -2888908049072491233, guid: 8040cda182899a7468295143a4d6e0d8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   EnemySO: {fileID: 11400000, guid: ba4e005d1f9177e4ab664697d5f37115, type: 2}
   CurrentHealth: 1
   SpoilerBarPrefab: {fileID: 7952561924919687190, guid: 78f16c63137b7454288ae7a19577d7fb, type: 3}
-  SpoilerBarOffset: {x: 0, y: 0.5, z: 0}
+  SpoilerBarOffset: {x: 0, y: 0.6, z: 0}
   deathAnimDuration: 0.6
 --- !u!58 &9046713328625864145
 CircleCollider2D:
@@ -189,8 +189,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0.032331355, y: 0}
+  m_Radius: 0.5323313
 --- !u!95 &-8457240350094488412
 Animator:
   serializedVersion: 7
@@ -201,7 +201,7 @@ Animator:
   m_GameObject: {fileID: 6962868729953710995}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3fc363c92263e1842810b6b1a5a33407, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
