@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemySpawnData
 {
     public GameObject[] prefabs;
-    public float spawnRate;   // seconds between spawns
-    public float stopTime;    // when this type stops spawning
+    public float spawnRate;   
+    public float stopTime;    
 }
 

@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip GunshotSFX;
     public AudioClip Reload;
     public AudioClip ButtonSFX;
+    private bool gameoverplaying = false;
 
     public static AudioManager instance;
     private void Awake()
@@ -27,10 +28,36 @@ public class AudioManager : MonoBehaviour
         
     }
     
-    void Start()
+    public void playLobbyBGM()
+    {
+        BGM.clip = bg[0];
+        BGM.Play();
+    }
+
+    public void playGameBGM()
     {
         BGM.clip = bg[1];
         BGM.Play();
+    }
+
+    public void playGameOverBGM()
+    {
+        if (gameoverplaying)
+        {
+            return;
+        }
+
+        gameoverplaying = true;
+
+        BGM.Stop();
+        BGM.clip = bg[2];
+        BGM.time = 0f;
+        BGM.Play();  
+    }
+
+    public void ResetBGMState()
+    {
+        gameoverplaying = false;
     }
 
     public void playSFX(AudioClip clip)

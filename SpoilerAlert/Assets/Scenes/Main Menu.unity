@@ -909,6 +909,7 @@ MonoBehaviour:
   bg:
   - {fileID: 8300000, guid: 7eabb0e7c969f7d489f2b7404127ab53, type: 3}
   - {fileID: 8300000, guid: ad9e76b24cd1b1749b9edf8810dbb142, type: 3}
+  - {fileID: 8300000, guid: d3d580e9659dad24391adfe283557e71, type: 3}
   deathsfx:
   - {fileID: 8300000, guid: 09dc9cb6fa088d944b1c385814082437, type: 3}
   - {fileID: 8300000, guid: 442a817a408d2394fb44b0e78dc9d2ed, type: 3}

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -13,6 +14,8 @@ public class EnemyMovement : MonoBehaviour
     private bool isLeaving = false;
     private Transform exitTarget;
 
+    private enum ExitPhase { None, Vertical, Horizontal }
+    private ExitPhase exitPhase;
 
     public void Init(PathPoint entry)
     {
@@ -21,21 +24,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        if (isLeaving)
-        {
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                exitTarget.position,
-                5f * Time.deltaTime
-            );
-
-            if (Vector3.Distance(transform.position, exitTarget.position) < 0.1f)
-            {
-                Destroy(gameObject);
-            }
-            return;
-        }
-
         if (target == null) return;
 
         if (stopped) {
@@ -58,6 +46,12 @@ public class EnemyMovement : MonoBehaviour
 
                 return;
             }
+            
+            if (!HasFreeSeatAhead(target))
+            {
+                ForceExit();
+                return;
+            }              
 
             PathPoint next = ChooseNext(target);
 
@@ -84,21 +78,54 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isLeaving)
+        {
+            Vector2 dir;
+
+            if (exitPhase == ExitPhase.Vertical)
+            {
+                dir = new Vector2(0f, Mathf.Sign(exitTarget.position.y - transform.position.y));
+
+                if (Mathf.Abs(transform.position.y - exitTarget.position.y) < 0.05f)
+                    exitPhase = ExitPhase.Horizontal;
+            }
+            else
+            {
+                dir = new Vector2(Mathf.Sign(exitTarget.position.x - transform.position.x), 0f);
+
+                if (Mathf.Abs(transform.position.x - exitTarget.position.x) < 0.05f)
+                {
+                    rb.linearVelocity = Vector2.zero;
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+
+            rb.linearVelocity = dir * 5f;
+            enemyBehaviour.UpdateAnimation(dir);
+            return;
+        }
+
         if (stopped)
         {
+            rb.linearVelocity = Vector2.zero;
             enemyBehaviour.UpdateAnimation(Vector2.zero);
+            return;
+        }
+
+        if (target == null)
+        {
+            rb.linearVelocity = Vector2.zero;
             return;
         }
 
         Vector2 direction = (target.transform.position - transform.position).normalized;
         rb.linearVelocity = direction * enemyBehaviour.EnemySO.EnemySpeed;
-
         enemyBehaviour.UpdateAnimation(direction);
     }
 
     private void OnDestroy()
     {
-        Debug.Log("Enemy OnDestroy fired: " + gameObject.name);
         EnemySpawner.onEnemyDestroy.Invoke();
         if (claimed != null)
         {
@@ -113,21 +140,48 @@ public class EnemyMovement : MonoBehaviour
         isLeaving = true;
         stopped = false;
         target = null;
-        
-        if (claimed != null)
-        {
-            claimed.isOccupied = false;
-        }
 
-        if (claimed != null && claimed.laneExit != null)
-        {
-            exitTarget = claimed.laneExit;
-        }
-        else
-        {
-            Debug.LogWarning("Enemy has no lane exit, destroying.");
-            Destroy(gameObject);
-        }
+        if (claimed != null)
+            claimed.isOccupied = false;
+
+        exitTarget = claimed != null && claimed.laneExit != null
+            ? claimed.laneExit
+            : LevelManager.main.GetNearestExit(transform.position);
+
+        exitPhase = ExitPhase.Vertical;
     }
 
+    private bool HasFreeSeatAhead(PathPoint start)
+    {
+        HashSet<PathPoint> visited = new HashSet<PathPoint>();
+        return CheckSeatRecursive(start, visited);
+    }
+
+    private bool CheckSeatRecursive(PathPoint point, HashSet<PathPoint> visited)
+    {
+        if (point == null)
+            return false;
+
+        if (visited.Contains(point))
+            return false;
+
+        visited.Add(point);
+
+        if (point.isSeat && !point.isOccupied)
+            return true;
+
+        if (CheckSeatRecursive(point.defaultNext, visited))
+            return true;
+
+        if (point.alternateNext != null)
+        {
+            foreach (var alt in point.alternateNext)
+            {
+                if (CheckSeatRecursive(alt, visited))
+                    return true;
+            }
+        }
+
+        return false;
+    }
 }
