@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource SFX;
 
     public AudioClip[] bg;
+    public AudioClip[] Miscbg;
     public AudioClip[] deathsfx;
     public AudioClip GunshotSFX;
     public AudioClip Reload;
@@ -14,6 +15,7 @@ public class AudioManager : MonoBehaviour
     private bool gameoverplaying = false;
     private bool isGameOver = false;
     [SerializeField] private WaveManager waveManager;
+    [SerializeField] private ScoreManager scoreManager;
 
     public static AudioManager instance;
     private void Awake()
@@ -32,7 +34,7 @@ public class AudioManager : MonoBehaviour
     
     public void playLobbyBGM()
     {
-        BGM.clip = bg[4];
+        BGM.clip = Miscbg[2];
         BGM.Play();
     }
 
@@ -73,7 +75,15 @@ public class AudioManager : MonoBehaviour
         isGameOver = true;
 
         BGM.Stop();
-        BGM.clip = bg[2];
+        if(scoreManager.customersLeft >= 6)
+        {
+            BGM.clip = Miscbg[0];
+        }
+        else
+        {
+            BGM.clip = Miscbg[1];
+        }
+        
         BGM.time = 0f;
         BGM.Play();  
     }

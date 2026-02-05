@@ -5661,6 +5661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 7477980279811163683, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8336283398006410781, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5751,6 +5755,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7eabb0e7c969f7d489f2b7404127ab53, type: 3}
   - {fileID: 8300000, guid: 4991a9aef15d0784892c98b5c5eca46a, type: 3}
   - {fileID: 8300000, guid: b13cdda78b3bff541a564863d4f7004b, type: 3}
+  Miscbg:
+  - {fileID: 8300000, guid: ef9356b426cfe924eaca5aeb7a172258, type: 3}
+  - {fileID: 8300000, guid: be732f460ce18e844a06e2f262148881, type: 3}
+  - {fileID: 8300000, guid: 2d746f2418f59194b83e871334ddcbac, type: 3}
   deathsfx:
   - {fileID: 8300000, guid: 09dc9cb6fa088d944b1c385814082437, type: 3}
   - {fileID: 8300000, guid: 442a817a408d2394fb44b0e78dc9d2ed, type: 3}
@@ -5762,6 +5770,7 @@ MonoBehaviour:
   Reload: {fileID: 8300000, guid: 606b8f16288efc0429ec72e039338016, type: 3}
   ButtonSFX: {fileID: 8300000, guid: d76be0268a29e5348a3806dbfb5acf4d, type: 3}
   waveManager: {fileID: 1803037564}
+  scoreManager: {fileID: 0}
 --- !u!4 &1910053899
 Transform:
   m_ObjectHideFlags: 0
