@@ -1293,8 +1293,6 @@ MonoBehaviour:
   GunshotSFX: {fileID: 8300000, guid: f4344e9eeb3994445810742a936c307e, type: 3}
   Reload: {fileID: 8300000, guid: 606b8f16288efc0429ec72e039338016, type: 3}
   ButtonSFX: {fileID: 8300000, guid: d76be0268a29e5348a3806dbfb5acf4d, type: 3}
-  waveManager: {fileID: 0}
-  scoreManager: {fileID: 0}
 --- !u!4 &1125940205
 Transform:
   m_ObjectHideFlags: 0
@@ -1547,7 +1545,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535

@@ -14,13 +14,11 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         main = this;
     }
 
     public void Start()
     {
-        audioManager.playGameBGM();
         audioManager.ResetBGMState();
     }
 

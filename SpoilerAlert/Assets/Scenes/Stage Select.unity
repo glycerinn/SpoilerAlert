@@ -165,8 +165,6 @@ MonoBehaviour:
   GunshotSFX: {fileID: 8300000, guid: f4344e9eeb3994445810742a936c307e, type: 3}
   Reload: {fileID: 8300000, guid: 606b8f16288efc0429ec72e039338016, type: 3}
   ButtonSFX: {fileID: 8300000, guid: d76be0268a29e5348a3806dbfb5acf4d, type: 3}
-  waveManager: {fileID: 0}
-  scoreManager: {fileID: 0}
 --- !u!4 &70405310
 Transform:
   m_ObjectHideFlags: 0
@@ -201,7 +199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &132593216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -219,8 +217,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 138.44534}
-  m_SizeDelta: {x: 145.16, y: 103.454}
+  m_AnchoredPosition: {x: -5.9916, y: 148.3386}
+  m_SizeDelta: {x: 172.3594, y: 114.4277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &132593217
 MonoBehaviour:
@@ -416,8 +414,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 549, y: 138.44534}
-  m_SizeDelta: {x: 145.16, y: 103.454}
+  m_AnchoredPosition: {x: 548.04675, y: 147.09177}
+  m_SizeDelta: {x: 167.8214, y: 113.5472}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529979823
 MonoBehaviour:
@@ -939,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7477980279811163683, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1116,7 +1114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.72995, y: -76.7}
+  m_AnchoredPosition: {x: 69.29294, y: -76.3818}
   m_SizeDelta: {x: 899.407, y: 357.9825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &821131134
@@ -1489,8 +1487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -553, y: 138.44534}
-  m_SizeDelta: {x: 145.16, y: 103.454}
+  m_AnchoredPosition: {x: -552.0875, y: 141.24002}
+  m_SizeDelta: {x: 166.7993, y: 117.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1281118295
 MonoBehaviour:
@@ -1622,19 +1620,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1755826624}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 166724255}
-        m_TargetAssemblyTypeName: StageSelectManager, Assembly-CSharp
-        m_MethodName: PlayStage1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1755826624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1754,19 +1740,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1936027003}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 166724255}
-        m_TargetAssemblyTypeName: StageSelectManager, Assembly-CSharp
-        m_MethodName: PlayStage1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1936027003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1841,7 +1815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.72995, y: -76.7}
+  m_AnchoredPosition: {x: 67.26126, y: -76.6}
   m_SizeDelta: {x: 899.407, y: 357.9825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2011415114

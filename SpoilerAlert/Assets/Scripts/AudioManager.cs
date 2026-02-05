@@ -14,8 +14,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip ButtonSFX;
     private bool gameoverplaying = false;
     private bool isGameOver = false;
-    [SerializeField] private WaveManager waveManager;
-    [SerializeField] private ScoreManager scoreManager;
 
     public static AudioManager instance;
     private void Awake()
@@ -38,21 +36,21 @@ public class AudioManager : MonoBehaviour
         BGM.Play();
     }
 
-    public void playGameBGM()
+    public void playGameBGM(int waveIndex)
     {
-        if(waveManager.currentWaveIndex >= 0 && waveManager.currentWaveIndex <= 3)
+        if(waveIndex >= 0 && waveIndex <= 3)
         {
             BGM.clip = bg[0];
-        }else if(waveManager.currentWaveIndex == 4)
+        }else if(waveIndex == 4)
         {
             BGM.clip = bg[1];
-        }else if(waveManager.currentWaveIndex >= 5 && waveManager.currentWaveIndex <= 6)
+        }else if(waveIndex >= 5 && waveIndex <= 6)
         {
             BGM.clip = bg[2];
-        }else if(waveManager.currentWaveIndex == 7)
+        }else if(waveIndex == 7)
         {
             BGM.clip = bg[3];
-        }else if(waveManager.currentWaveIndex == 8)
+        }else if(waveIndex == 8)
         {
             BGM.clip = bg[2];
         }
@@ -64,7 +62,7 @@ public class AudioManager : MonoBehaviour
         BGM.Play();
     }
 
-    public void playGameOverBGM()
+    public void playGameOverBGM(int customersLeft)
     {
         if (gameoverplaying)
         {
@@ -75,14 +73,7 @@ public class AudioManager : MonoBehaviour
         isGameOver = true;
 
         BGM.Stop();
-        if(scoreManager.customersLeft >= 6)
-        {
-            BGM.clip = Miscbg[0];
-        }
-        else
-        {
-            BGM.clip = Miscbg[1];
-        }
+        BGM.clip = customersLeft >= 6 ? Miscbg[0] : Miscbg[1];
         
         BGM.time = 0f;
         BGM.Play();  

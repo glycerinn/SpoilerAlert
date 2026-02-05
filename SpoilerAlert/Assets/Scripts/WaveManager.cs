@@ -9,13 +9,11 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private WaveDataSO[] waves;
     [SerializeField] private EnemySpawner spawner;
     [SerializeField] private WaveUI waveUI;
-    private AudioManager audioManager;
 
     public int currentWaveIndex = 0;
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         Instance = this;
     }
 
@@ -28,7 +26,7 @@ public class WaveManager : MonoBehaviour
     {
         while (currentWaveIndex < waves.Length)
         {
-            audioManager.playGameBGM();
+            AudioManager.instance.playGameBGM(currentWaveIndex);
 
             WaveDataSO wave = waves[currentWaveIndex];
 

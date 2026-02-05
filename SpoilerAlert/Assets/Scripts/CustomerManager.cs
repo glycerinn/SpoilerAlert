@@ -9,13 +9,11 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private PathPoint[] seats;
     [SerializeField] private GameOverScript gameOverScript;
 
-    private AudioManager audioManager;
     public static CustomerManager Instance;
     public int customersRemaining;
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         Instance = this;
         foreach (var seat in seats)
         {
@@ -72,7 +70,7 @@ public class CustomerManager : MonoBehaviour
 
     public void GameOver()
     {
-        audioManager.playGameOverBGM();
+        AudioManager.instance.playGameOverBGM(customersRemaining);
         gameOverScript.SetUp();
         Time.timeScale = 0f;
     }
