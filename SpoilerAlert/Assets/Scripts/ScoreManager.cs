@@ -1,19 +1,19 @@
 using UnityEngine;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int customersLeft;
-    private string rank;
+    public int customersLeft;
+    public string rank;
+    public TextMeshProUGUI CustomerCount;
+    public TextMeshProUGUI Rank;
+    
     [SerializeField] private CustomerManager customerManager;
 
-    void Start()
-    {
-        customersLeft = customerManager.GetComponent<CustomerManager>().customersRemaining;
-    }
-
-    
     void Update()
     {
+        customersLeft = customerManager.GetComponent<CustomerManager>().customersRemaining;
+        
         if(customersLeft == 36)
         {
             rank = "S";
@@ -34,5 +34,9 @@ public class ScoreManager : MonoBehaviour
         {
             rank = "You're fired.";
         }
+
+        CustomerCount.text = "Customers left: " + customersLeft;
+        Rank.text = "Rank: " + rank;
+
     }
 }

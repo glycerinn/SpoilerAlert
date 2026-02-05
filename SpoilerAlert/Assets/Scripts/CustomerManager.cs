@@ -7,7 +7,7 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private int customerCount;
     [SerializeField] private Vector3 seatOffset = new Vector3(0, -0.5f, 0);
     [SerializeField] private PathPoint[] seats;
-    [SerializeField] private GameObject GameOverPanel;
+    [SerializeField] private GameOverScript gameOverScript;
 
     private AudioManager audioManager;
     public static CustomerManager Instance;
@@ -73,7 +73,7 @@ public class CustomerManager : MonoBehaviour
     public void GameOver()
     {
         audioManager.playGameOverBGM();
-        GameOverPanel.SetActive(true);
+        gameOverScript.SetUp();
         Time.timeScale = 0f;
     }
 
