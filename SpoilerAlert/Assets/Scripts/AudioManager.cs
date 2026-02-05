@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip Reload;
     public AudioClip ButtonSFX;
     private bool gameoverplaying = false;
+    private bool isGameOver = false;
     [SerializeField] private WaveManager waveManager;
 
     public static AudioManager instance;
@@ -69,6 +70,7 @@ public class AudioManager : MonoBehaviour
         }
 
         gameoverplaying = true;
+        isGameOver = true;
 
         BGM.Stop();
         BGM.clip = bg[2];
@@ -81,24 +83,22 @@ public class AudioManager : MonoBehaviour
         gameoverplaying = false;
     }
 
-    public void playSFX(AudioClip clip)
-    {
-        SFX.PlayOneShot(clip);
-    }
-
     public void playHitSFX()
-    {
+    {   
+        if (isGameOver) return;
         int rand = Random.Range(0, deathsfx.Length);
         SFX.PlayOneShot(deathsfx[rand]);
     }
 
     public void playGunshot()
     {
+        if (isGameOver) return;
         SFX.PlayOneShot(GunshotSFX);
     }
 
     public void playReload()
     {
+        if (isGameOver) return;
         SFX.PlayOneShot(Reload);
     }
 
