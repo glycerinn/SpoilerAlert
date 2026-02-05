@@ -11,7 +11,7 @@ public class CustomerManager : MonoBehaviour
 
     private AudioManager audioManager;
     public static CustomerManager Instance;
-    private int customersRemaining;
+    public int customersRemaining;
 
     private void Awake()
     {

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,7 @@ public class MainMenuManager : MonoBehaviour
 {
     private AudioManager audioManager;
     public GameObject Credits;
+    public LevelLoader levelLoader;
 
     public void Awake()
     {
@@ -19,7 +21,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void SelectGameStage()
     {
-        SceneManager.LoadScene("Stage Select");
+        StartCoroutine(levelLoader.PlayTransition());
     }
 
     public void CreditsShow()

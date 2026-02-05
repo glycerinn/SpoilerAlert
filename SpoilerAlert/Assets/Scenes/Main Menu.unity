@@ -402,6 +402,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601719080}
   m_CullTransparentMesh: 1
+--- !u!4 &630183157 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+  m_PrefabInstance: {fileID: 5924477596968839377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &704478796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,10 +1802,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1846,6 +1851,7 @@ RectTransform:
   - {fileID: 898306221}
   - {fileID: 1004506469}
   - {fileID: 601719081}
+  - {fileID: 630183157}
   - {fileID: 780221376}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1867,6 +1873,75 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
   Credits: {fileID: 780221375}
+  levelLoader: {fileID: 5924477596968839378}
+--- !u!1001 &5924477596968839377
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2041083386}
+    m_Modifications:
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069403496316666709, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477980279811163683, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+--- !u!114 &5924477596968839378 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6078770885834507084, guid: 5c651fbdce7bd564bbe223d8ac5390c6, type: 3}
+  m_PrefabInstance: {fileID: 5924477596968839377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223e7ad543e0c7c419a181b5d97b593d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelLoader
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

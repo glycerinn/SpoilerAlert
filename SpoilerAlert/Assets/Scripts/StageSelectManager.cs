@@ -3,9 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class StageSelectManager : MonoBehaviour
 {
+    public LevelLoader levelLoader;
+
     public void BacktoMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        StartCoroutine(levelLoader.PlayBackTransition());
     }
 
     public void PlayStage1()
