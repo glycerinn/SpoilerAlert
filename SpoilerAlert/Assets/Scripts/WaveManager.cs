@@ -8,11 +8,14 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField] private WaveDataSO[] waves;
     [SerializeField] private EnemySpawner spawner;
+    [SerializeField] private WaveUI waveUI;
+    private AudioManager audioManager;
 
-    private int currentWaveIndex = 0;
+    public int currentWaveIndex = 0;
 
     private void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         Instance = this;
     }
 
@@ -25,7 +28,11 @@ public class WaveManager : MonoBehaviour
     {
         while (currentWaveIndex < waves.Length)
         {
+            audioManager.playGameBGM();
+
             WaveDataSO wave = waves[currentWaveIndex];
+
+            waveUI.showWave(currentWaveIndex + 1);
 
             Debug.Log("Starting wave " + currentWaveIndex);
 

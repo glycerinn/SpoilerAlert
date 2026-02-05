@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip Reload;
     public AudioClip ButtonSFX;
     private bool gameoverplaying = false;
+    [SerializeField] private WaveManager waveManager;
 
     public static AudioManager instance;
     private void Awake()
@@ -30,13 +31,33 @@ public class AudioManager : MonoBehaviour
     
     public void playLobbyBGM()
     {
-        BGM.clip = bg[0];
+        BGM.clip = bg[4];
         BGM.Play();
     }
 
     public void playGameBGM()
     {
-        BGM.clip = bg[1];
+        if(waveManager.currentWaveIndex >= 0 && waveManager.currentWaveIndex <= 3)
+        {
+            BGM.clip = bg[0];
+        }else if(waveManager.currentWaveIndex == 4)
+        {
+            BGM.clip = bg[1];
+        }else if(waveManager.currentWaveIndex >= 5 && waveManager.currentWaveIndex <= 6)
+        {
+            BGM.clip = bg[2];
+        }else if(waveManager.currentWaveIndex == 7)
+        {
+            BGM.clip = bg[3];
+        }else if(waveManager.currentWaveIndex == 8)
+        {
+            BGM.clip = bg[2];
+        }
+        else
+        {
+            BGM.clip = bg[4];
+        }
+            
         BGM.Play();
     }
 
