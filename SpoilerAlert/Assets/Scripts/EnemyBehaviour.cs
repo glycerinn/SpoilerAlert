@@ -2,7 +2,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using System.Drawing;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -21,6 +20,7 @@ public class EnemyBehaviour : MonoBehaviour
     private PathPoint pathPoint;
     private Bullets ammo;
     private bool isDying;
+    private SpriteRenderer rend;
 
     private static readonly int MoveX = Animator.StringToHash("DirectionX");
     private static readonly int MoveY = Animator.StringToHash("DirectionY");
@@ -28,6 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void Awake()
     {
+        rend = GetComponent<SpriteRenderer>();
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         animator = GetComponent<Animator>();
         animator.runtimeAnimatorController = EnemySO.animatorController;
@@ -61,7 +62,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (!ammo.CanConsumeAmmo())
             return;
-
+        StartCoroutine(FlashHit());
         audioManager.playHitSFX();
         takeDamage(1);
     }
@@ -160,5 +161,12 @@ public class EnemyBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(deathAnimDuration);
         Destroy(gameObject);
+    }
+
+    private IEnumerator FlashHit()
+    {
+        rend.color = Color.pink;
+        yield return new WaitForSeconds(0.5f);
+        rend.color = Color.white;
     }
 }

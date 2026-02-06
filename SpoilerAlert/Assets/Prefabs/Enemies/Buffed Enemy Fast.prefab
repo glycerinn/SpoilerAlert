@@ -152,6 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
   EnemySO: {fileID: 11400000, guid: ad18fa7cfed87ff45ae264910b6bb5c9, type: 2}
   CurrentHealth: 1
+  newColor: {r: 1, g: 0.5686275, b: 0.5686275, a: 0}
   SpoilerBarPrefab: {fileID: 7952561924919687190, guid: 78f16c63137b7454288ae7a19577d7fb, type: 3}
   SpoilerBarOffset: {x: 0, y: 0.6, z: 0}
   deathAnimDuration: 0.6
