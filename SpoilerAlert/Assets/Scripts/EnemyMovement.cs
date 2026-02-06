@@ -144,11 +144,17 @@ public class EnemyMovement : MonoBehaviour
         if (claimed != null)
             claimed.isOccupied = false;
 
-        exitTarget = claimed != null && claimed.laneExit != null
-            ? claimed.laneExit
-            : LevelManager.main.GetNearestExit(transform.position);
+         exitTarget = claimed?.laneExit;
 
-        exitPhase = ExitPhase.Vertical;
+        if (exitTarget == null)
+            exitTarget = LevelManager.main.GetNearestExit(transform.position);
+
+        if (exitTarget == null)
+        {
+            Debug.LogWarning("No exit found, destroying enemy");
+            Destroy(gameObject);
+            return;
+        }
     }
 
     private bool HasFreeSeatAhead(PathPoint start)

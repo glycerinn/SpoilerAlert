@@ -26,4 +26,4 @@ MonoBehaviour:
     - {fileID: 6962868729953710995, guid: 85f4d0fcf37402048b6928e59f01558f, type: 3}
     spawnRate: 4
     stopTime: 41
-  waveDuration: 120
+  waveDuration: 240

@@ -8,8 +8,10 @@ public class EnemySpawner : MonoBehaviour
     private WaveDataSO currentWave;
     private float timer;
     private int enemiesAlive;
+    
     private bool isSpawning = false;
     private bool waveActive;
+    private bool waveTimedOut;
 
     private float[] spawnTimers;
 
@@ -25,6 +27,7 @@ public class EnemySpawner : MonoBehaviour
 
         waveActive = true;
         isSpawning = true;
+        waveTimedOut = false;
     }
 
     public void StartSpawn()
@@ -47,18 +50,24 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if(!waveActive||currentWave == null) return;
+        if(currentWave == null) return;
         timer += Time.deltaTime;
 
-        if (timer >= currentWave.waveDuration)
+        if (isSpawning && AllSpawningFinished() && enemiesAlive <= 0)
         {
-            EndWaveByTimeout();
+            Debug.Log("Wave cleared early");
             isSpawning = false;
-            waveActive = false; 
+            waveActive = false;
             return;
         }
 
-        bool anyTypeStillSpawning = false;
+        if (!waveTimedOut && timer >= currentWave.waveDuration)
+        {
+            waveTimedOut = true;
+            EndWaveByTimeout();
+            isSpawning = false;
+            return;
+        }
 
         for (int i = 0; i < currentWave.enemyTypes.Length; i++)
         {
@@ -66,8 +75,6 @@ public class EnemySpawner : MonoBehaviour
 
             if (timer >= type.stopTime)
                 continue;
-
-            anyTypeStillSpawning = true;
 
             spawnTimers[i] += Time.deltaTime;
 
@@ -78,8 +85,6 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        if (!anyTypeStillSpawning)
-            isSpawning = false;
 
         if (!isSpawning && enemiesAlive <= 0)
         {
@@ -134,6 +139,16 @@ public class EnemySpawner : MonoBehaviour
         {
             enemy.ForceExit();
         }
+    }
+
+    private bool AllSpawningFinished()
+    {
+        for (int i = 0; i < currentWave.enemyTypes.Length; i++)
+        {
+            if (timer < currentWave.enemyTypes[i].stopTime)
+                return false;
+        }
+        return true;
     }
 
 
