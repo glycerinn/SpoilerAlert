@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6120920897998352129}
   - component: {fileID: 8052262797952035903}
   - component: {fileID: -8711810619576345434}
-  - component: {fileID: 9046713328625864145}
   - component: {fileID: 8239501930917311315}
+  - component: {fileID: 2209360268522149571}
   m_Layer: 0
   m_Name: Enemy Fast
   m_TagString: Untagged
@@ -152,11 +152,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
   EnemySO: {fileID: 11400000, guid: 74b283f7cc9821549bee3c7f027450c4, type: 2}
   CurrentHealth: 1
-  newColor: {r: 1, g: 0.5686275, b: 0.5686275, a: 0}
   SpoilerBarPrefab: {fileID: 7952561924919687190, guid: 78f16c63137b7454288ae7a19577d7fb, type: 3}
   SpoilerBarOffset: {x: 0, y: 0.6, z: 0}
   deathAnimDuration: 0.6
---- !u!58 &9046713328625864145
+--- !u!95 &8239501930917311315
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962868729953710995}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bdb0bf4d6c778ad49885e4441c629839, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &2209360268522149571
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,27 +211,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!95 &8239501930917311315
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6962868729953710995}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bdb0bf4d6c778ad49885e4441c629839, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_Offset: {x: 0.036770705, y: 0}
+  m_Radius: 0.53677064
