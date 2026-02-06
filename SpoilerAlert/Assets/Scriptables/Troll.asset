@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Troll
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
   name: Normal
-  MaxEnemyHealth: 100
+  MaxEnemyHealth: 40
   EnemySpeed: 5
   SpoilerSpeed: 3
   animatorController: {fileID: 9100000, guid: 8ba66026b2561e24e85f336448e6c477, type: 2}
