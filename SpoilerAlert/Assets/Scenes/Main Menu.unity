@@ -610,7 +610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -598, y: -1363}
+  m_AnchoredPosition: {x: -598, y: -3443}
   m_SizeDelta: {x: 1052, y: 342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &878462786
@@ -1392,8 +1392,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1504789623}
   m_HandleRect: {fileID: 1504789622}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.34007847
+  m_Value: 1.0000001
+  m_Size: 0.15049107
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1546,8 +1546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00030517578, y: -1057.9039}
-  m_SizeDelta: {x: 1739.8, y: 3206.1504}
+  m_AnchoredPosition: {x: 0.00030517578, y: -3077.4453}
+  m_SizeDelta: {x: 1739.8, y: 7245.233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400447081
 MonoBehaviour:
@@ -1569,25 +1569,51 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nCREDITS\n\n\"Throwing dices, slowed down, A\" by Moulaythami\n-- https://freesound.org/s/550314/
-    --\nLicense: Attribution 4.0\n\n\"Slow motion sound.wav\" by karolist\n-- https://freesound.org/s/370632/
-    --\nLicense: Creative Commons 0\n\n\"pistol reload sound.mp3\" by GFL7\n-- https://freesound.org/s/276959/
-    --\nLicense: Creative Commons 0\n\n\"mp7 reload sound.mp3\" by GFL7\n-- https://freesound.org/s/276962/
-    --\nLicense: Creative Commons 0\n\n\"Ripping a spiral bound notebook or a calendar
-    page\" by nomadas\n-- https://freesound.org/s/611718/ --\nLicense: Creative Commons
-    0\n\n\"UI Button Presses\" by NewHopeGames\n-- https://freesound.org/s/815844/
-    --\nLicense: Creative Commons 0\n\n\u201CGerman Industrial Metal\u201D by Bogart
-    VGM,\nlicensed under CC BY 4.0\nhttps://creativecommons.org/licenses/by/4.0/\nSource:
-    https://opengameart.org/content/german-industrial-metal\nChanges made: None\n\nMusic
-    by Tri-Tachyon - https://soundcloud.com/tri-tachyon/albums\n\u201CTri-Tachyon
-    - (Heavy Metal Riffs - 4HR.DM8)\u201D by Ellary (Tri-Tachyon), \nlicensed under
-    CC BY 4.0\nhttps://creativecommons.org/licenses/by/4.0/\nSource: https://opengameart.org/content/heavy-metal-riffs-4hrdm8\nChanges
-    made: Edited to extend the music\n\nMusic: \u201CThe Four Seasons \u2013 Summer
-    (1st, 2nd, 3rd Movements)\u201D\nPerformed by John Harrison (violin),\nconducted
-    by Robert Turizziani,\nThe Wichita State University Chamber Players.\nOriginally
-    composed by Antonio Vivaldi.\nLicensed under CC BY-SA 4.0\nhttps://creativecommons.org/licenses/by-sa/4.0/\nSource:
-    https://www.classicals.de/vivaldi-seasons\nChanges made: Applied filter to 1st
-    movement; trimmed in-game. \n"
+  m_text: "\nCREDITS\n\n\"Throwing dices, slowed down, A\" by Moulaythami\r\n-- https://freesound.org/s/550314/
+    --\r\nLicense: Attribution 4.0\r\n\r\n\"Slow motion sound.wav\" by karolist\r\n--
+    https://freesound.org/s/370632/ --\r\nLicense: Creative Commons 0\r\n\r\n\"pistol
+    reload sound.mp3\" by GFL7\r\n-- https://freesound.org/s/276959/ --\r\nLicense:
+    Creative Commons 0\r\n\r\n\"mp7 reload sound.mp3\" by GFL7\r\n-- https://freesound.org/s/276962/
+    --\r\nLicense: Creative Commons 0\r\n\r\n\"Ripping a spiral bound notebook or
+    a calendar page\" by nomadas\r\n-- https://freesound.org/s/611718/ --\r\nLicense:
+    Creative Commons 0\r\n\r\n\"UI Button Presses\" by NewHopeGames\r\n-- https://freesound.org/s/815844/
+    --\r\nLicense: Creative Commons 0\r\n\r\n\u201CGerman Industrial Metal\u201D
+    by Bogart VGM,\r\nlicensed under CC BY 4.0\r\nhttps://creativecommons.org/licenses/by/4.0/\r\nSource:
+    https://opengameart.org/content/german-industrial-metal\r\nChanges made: None\r\n\r\nMusic
+    by Tri-Tachyon - https://soundcloud.com/tri-tachyon/albums\r\n\u201CTri-Tachyon
+    - (Heavy Metal Riffs - 4HR.DM8)\u201D by Ellary (Tri-Tachyon), \r\nlicensed under
+    CC BY 4.0\r\nhttps://creativecommons.org/licenses/by/4.0/\r\nSource: https://opengameart.org/content/heavy-metal-riffs-4hrdm8\r\nChanges
+    made: Edited to extend the music\r\n\r\nMusic: \u201CThe Four Seasons \u2013
+    Summer (1st, 2nd, 3rd Movements)\u201D\r\nPerformed by John Harrison (violin),\r\nconducted
+    by Robert Turizziani,\r\nThe Wichita State University Chamber Players.\r\nOriginally
+    composed by Antonio Vivaldi.\r\nLicensed under CC BY-SA 4.0\r\nhttps://creativecommons.org/licenses/by-sa/4.0/\r\nSource:
+    https://www.classicals.de/vivaldi-seasons\r\nChanges made: Applied filter to
+    1st movement; trimmed in-game.\r\n\r\nVOC_220925-2127-2_FR_OfficialMarchingBand.wav
+    by kevp888\r\n-- https://freesound.org/s/653810/ --\r\nLicense: Attribution 4.0\r\n\r\nNuclear
+    alarm of Tihange (Li\xE8ge, Belgium) by Chepa420\r\n-- https://freesound.org/s/441089/
+    --\r\nLicense: Creative Commons 0\r\n\r\nDelta-7 Detonation Alarm by FusionWolf3740\r\n--
+    https://freesound.org/s/570462/ --\r\nLicense: Creative Commons 0\r\n\r\nwar
+    sounds.mp3 by northrhq\r\n-- https://freesound.org/s/578841/ --\r\nLicense: Creative
+    Commons 0\r\n\r\nMuffled Warfare 2 - This War of Ours by Vlaxim\r\n-- https://freesound.org/s/607227/
+    --\r\nLicense: Creative Commons 0\r\n\r\nfear crying 3.mp3 by aebttny\r\n-- https://freesound.org/s/569076/
+    --\r\nLicense: Creative Commons 0\r\n\r\nNuclear Explosion by qubodup\r\n-- https://freesound.org/s/194623/
+    --\r\nLicense: Attribution 4.0\r\n\r\ncountdown from 10.wav by goodfelo\r\n--
+    https://freesound.org/s/188502/ --\r\nLicense: Creative Commons 0\r\n\r\nExplosion
+    by qubodup\r\n-- https://freesound.org/s/182429/ --\r\nLicense: Creative Commons
+    0\r\n\r\nExplosion with debris - authentic. 4kg TNT by sidohzen\r\n-- https://freesound.org/s/165808/
+    --\r\nLicense: Creative Commons 0\r\n\r\nExplosive by qubodup\r\n-- https://freesound.org/s/162265/
+    --\r\nLicense: Creative Commons 0\r\n\r\nDistant WW2 Gunfire Kent.wav by Cheeseheadburger\r\n--
+    https://freesound.org/s/170478/ --\r\nLicense: Attribution 4.0\r\nChanges made:
+    Given an old radio filter\r\n\r\nHappy Loop #2 by danlucaz\r\n-- https://freesound.org/s/569858/
+    --\r\nLicense: Creative Commons 0\r\n\r\n\"Introitus. Requiem aeternam (Choeur
+    des Marais)\"\r\nCh\u0153ur des Marais, Villefranche-sur-Sa\xF4ne, Fr\r\n\xA9
+    Ch\u0153ur des Marais, Villefranche-sur-Sa\xF4ne, Fr\r\n\r\n\"II. Kyrie (Choeur
+    des Marais)\"\r\nCh\u0153ur des Marais, Villefranche-sur-Sa\xF4ne, Fr\r\n\xA9
+    Ch\u0153ur des Marais, Villefranche-sur-Sa\xF4ne, Fr\r\n\r\nMusic: \u201CChopin
+    \u2013 Albumleaf, B. 151\u201D\r\nPerformed by the Set Chopin Free Project\r\nLicensed
+    under Creative Commons Attribution-NonCommercial 4.0 International\r\nhttps://creativecommons.org/licenses/by-nc/4.0/\r\nSource:
+    https://www.classicals.de/chopin-collection\r\nRecorded and released to the public
+    by the Set Chopin Free Kickstarter Project."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1831,7 +1857,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1082378302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.6599215}
+  m_AnchorMin: {x: 0, y: 0.84950894}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
