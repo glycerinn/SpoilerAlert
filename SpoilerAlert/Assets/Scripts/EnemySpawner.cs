@@ -62,6 +62,7 @@ public class EnemySpawner : MonoBehaviour
             Debug.Log("Wave timed out forcing enemies to exit");
             waveTimedOut = true;
             isSpawning = false;
+            waveActive = false;
             EndWaveByTimeout();
         }
 
