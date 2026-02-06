@@ -5205,8 +5205,8 @@ MonoBehaviour:
   customerManager: {fileID: 1803037563}
   gameOverScript: {fileID: 840301391}
   waves:
-  - {fileID: 11400000, guid: 93f6a4101ac6131468aec7c95bbc74ed, type: 2}
   - {fileID: 11400000, guid: 617f8ad2236a91c4ca3e765871dac6c5, type: 2}
+  - {fileID: 11400000, guid: 3aa690c378c0e6048bb3c7fcb841baff, type: 2}
   - {fileID: 11400000, guid: bc9d6f3a0425dc54c87d312bed17cf93, type: 2}
   - {fileID: 11400000, guid: 5a8289218ef2c5c4397e010ba0e01fa5, type: 2}
   - {fileID: 11400000, guid: 11cce4fbe915dc24e9d554b999e577d5, type: 2}
@@ -5214,7 +5214,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a90215c7aa78a3544a35bb355b16e96c, type: 2}
   - {fileID: 11400000, guid: 27a249a887fd2aa49a6a31ac41b198be, type: 2}
   - {fileID: 11400000, guid: 44fafb475c329f9448ae933c4d462a35, type: 2}
-  - {fileID: 11400000, guid: 3aa690c378c0e6048bb3c7fcb841baff, type: 2}
+  - {fileID: 11400000, guid: 93f6a4101ac6131468aec7c95bbc74ed, type: 2}
   spawner: {fileID: 1803037562}
   waveUI: {fileID: 1803037566}
   currentWaveIndex: 0
