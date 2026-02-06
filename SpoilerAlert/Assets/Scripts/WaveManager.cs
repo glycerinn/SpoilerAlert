@@ -6,6 +6,8 @@ public class WaveManager : MonoBehaviour
 {
     public static WaveManager Instance;
 
+    [SerializeField] private CustomerManager customerManager;
+    [SerializeField] private GameOverScript gameOverScript;
     [SerializeField] private WaveDataSO[] waves;
     [SerializeField] private EnemySpawner spawner;
     [SerializeField] private WaveUI waveUI;
@@ -20,6 +22,16 @@ public class WaveManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(RunWave());
+    }
+
+    private void Update()
+    {
+        if(currentWaveIndex == waves.Length && spawner.IsWaveFinished())
+        {
+            AudioManager.instance.playGameOverBGM(customerManager.customersRemaining);
+            gameOverScript.SetUp();
+            Time.timeScale = 0f;
+        }
     }
 
     private IEnumerator RunWave()
@@ -49,5 +61,8 @@ public class WaveManager : MonoBehaviour
 
             currentWaveIndex++;
         }
+
+        
+        
     }
 }

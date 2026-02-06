@@ -17,6 +17,7 @@ public class PauseManager : MonoBehaviour
                 }
                 else
                 {
+                    AudioManager.instance.PausedSound();
                     Pause();
                 }
             }

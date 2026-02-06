@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip ButtonSFX;
     private bool gameoverplaying = false;
     private bool isGameOver = false;
+    private bool isPaused = false;
 
     public static AudioManager instance;
     private void Awake()
@@ -38,6 +39,7 @@ public class AudioManager : MonoBehaviour
 
     public void playGameBGM(int waveIndex)
     {
+        if (isPaused) return;
         if(waveIndex >= 0 && waveIndex <= 3)
         {
             BGM.clip = bg[0];
@@ -87,6 +89,7 @@ public class AudioManager : MonoBehaviour
     public void playHitSFX()
     {   
         if (isGameOver) return;
+        if (isPaused) return;
         int rand = Random.Range(0, deathsfx.Length);
         SFX.PlayOneShot(deathsfx[rand]);
     }
@@ -94,17 +97,24 @@ public class AudioManager : MonoBehaviour
     public void playGunshot()
     {
         if (isGameOver) return;
+        if (isPaused) return;
         SFX.PlayOneShot(GunshotSFX);
     }
 
     public void playReload()
     {
         if (isGameOver) return;
+        if (isPaused) return;
         SFX.PlayOneShot(Reload);
     }
 
     public void playButtonSFX()
     {
         SFX.PlayOneShot(ButtonSFX);
+    }
+
+    public void PausedSound()
+    {
+        isPaused = true;
     }
 }
