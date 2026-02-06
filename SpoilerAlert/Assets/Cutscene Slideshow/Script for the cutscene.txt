@@ -1,0 +1,23 @@
+Script for the cutscene
+
+[Fade in after the video cutscene]
+
+Image 1
+Can't believe I got hired just like that. No interview or training, no nothing..
+
+Image 2
+A broad shouldered man appeared from one of the rooms. "You're the new guy, yes?"
+
+"Y-yes," I nodded.
+
+"Good, I've come to inform you that your shift is starting soon at 8AM"
+
+Image 3
+
+"Your job is simple. Shoot them rotters trying to spoil the movie for everyone"
+
+Image 4
+"You know what to do"
+
+[Transition to stage select]
+
