@@ -23,7 +23,7 @@ MonoBehaviour:
     spawnRate: 2
     stopTime: 120
   - prefabs:
-    - {fileID: 6962868729953710995, guid: 47fabf5282f67eb41aeccf2524fda30b, type: 3}
+    - {fileID: 6962868729953710995, guid: 85f4d0fcf37402048b6928e59f01558f, type: 3}
     spawnRate: 2
     stopTime: 120
   waveDuration: 600

@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2888908049072491233, guid: 8040cda182899a7468295143a4d6e0d8, type: 3}
+  m_Sprite: {fileID: 6972813422636249954, guid: 25db096ee0636494797c5863c40acd11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
   EnemySO: {fileID: 11400000, guid: db5c11b7e1fe1d040bfe631519560b56, type: 2}
   CurrentHealth: 4
-  newColor: {r: 1, g: 0.5686275, b: 0.5686275, a: 0}
   SpoilerBarPrefab: {fileID: 7952561924919687190, guid: 78f16c63137b7454288ae7a19577d7fb, type: 3}
   SpoilerBarOffset: {x: 0, y: 0.6, z: 0}
   deathAnimDuration: 0.6
