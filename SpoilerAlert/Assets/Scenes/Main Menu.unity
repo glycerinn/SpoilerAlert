@@ -361,8 +361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -417, y: 270}
-  m_SizeDelta: {x: 1076, y: 474}
+  m_AnchoredPosition: {x: -492, y: 214}
+  m_SizeDelta: {x: 898.2516, y: 395.6988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &601719082
 MonoBehaviour:
@@ -850,8 +850,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -558, y: -80}
-  m_SizeDelta: {x: 1052, y: 342}
+  m_AnchoredPosition: {x: -675.79895, y: -53}
+  m_SizeDelta: {x: 930.8928, y: 302.6287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &898306222
 MonoBehaviour:
@@ -982,8 +982,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -558, y: -233}
-  m_SizeDelta: {x: 1051, y: 342}
+  m_AnchoredPosition: {x: -675.3565, y: -189}
+  m_SizeDelta: {x: 930.008, y: 302.6287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004506470
 MonoBehaviour:
@@ -1702,8 +1702,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -558, y: -390}
-  m_SizeDelta: {x: 1052, y: 342}
+  m_AnchoredPosition: {x: -676.68384, y: -322}
+  m_SizeDelta: {x: 930.8928, y: 302.6287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504453642
 MonoBehaviour:
@@ -1964,6 +1964,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587848843}
   m_CullTransparentMesh: 1
+--- !u!1 &1808990005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1808990006}
+  - component: {fileID: 1808990008}
+  - component: {fileID: 1808990007}
+  m_Layer: 5
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1808990006
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808990005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.91134346, y: 0.91134346, z: 0.91134346}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2041083386}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -492, y: 196}
+  m_SizeDelta: {x: 898.2516, y: 395.6988}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1808990007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808990005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -560466483739412668, guid: 1a4946d8887e663418b6ad95c5525d89, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1808990008
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808990005}
+  m_CullTransparentMesh: 1
 --- !u!1 &2041083382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,6 +2138,7 @@ RectTransform:
   - {fileID: 898306221}
   - {fileID: 1504453641}
   - {fileID: 1004506469}
+  - {fileID: 1808990006}
   - {fileID: 601719081}
   - {fileID: 630183157}
   - {fileID: 780221376}
