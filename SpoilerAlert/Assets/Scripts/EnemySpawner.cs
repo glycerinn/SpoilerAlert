@@ -12,13 +12,23 @@ public class EnemySpawner : MonoBehaviour
     private bool isSpawning = false;
     private bool waveActive;
     private bool waveTimedOut;
+    private bool waveFinishedSignaled;
 
     private float[] spawnTimers;
 
-    public static UnityEvent onEnemyDestroy = new UnityEvent();
 
     public void ConfigureWave(WaveDataSO wave)
     {
+        enemiesAlive = 0;
+        
+        EnemyMovement[] leftovers =
+            Object.FindObjectsByType<EnemyMovement>(FindObjectsSortMode.None);
+
+        foreach (var enemy in leftovers)
+        {
+            Destroy(enemy.gameObject);
+        }
+
         currentWave = wave;
         timer = 0f;
         enemiesAlive = 0;
@@ -28,6 +38,7 @@ public class EnemySpawner : MonoBehaviour
         waveActive = true;
         isSpawning = true;
         waveTimedOut = false;
+        waveFinishedSignaled = false;
     }
 
     public void StartSpawn()
@@ -40,48 +51,49 @@ public class EnemySpawner : MonoBehaviour
         isSpawning = false;
     }
 
-    private void Awake()
-    {
-        onEnemyDestroy.RemoveAllListeners();
-        onEnemyDestroy.AddListener(EnemyDestroyed);
-        Debug.Log("EnemySpawner Awake: " + gameObject.name);
-        Debug.Log("EnemySpawner subscribed to onEnemyDestroy");
-    }
 
     private void Update()
     {
         if(currentWave == null) return;
         timer += Time.deltaTime;
 
-        if (isSpawning && AllSpawningFinished() && enemiesAlive <= 0)
-        {
-            Debug.Log("Wave cleared early");
-            isSpawning = false;
-            waveActive = false;
-            return;
-        }
-
         if (!waveTimedOut && timer >= currentWave.waveDuration)
         {
+            Debug.Log("Wave timed out forcing enemies to exit");
             waveTimedOut = true;
-            EndWaveByTimeout();
             isSpawning = false;
-            return;
+            EndWaveByTimeout();
         }
 
-        for (int i = 0; i < currentWave.enemyTypes.Length; i++)
+        if (isSpawning)
         {
-            EnemySpawnData type = currentWave.enemyTypes[i];
-
-            if (timer >= type.stopTime)
-                continue;
-
-            spawnTimers[i] += Time.deltaTime;
-
-            if (spawnTimers[i] >= type.spawnRate)
+            for (int i = 0; i < currentWave.enemyTypes.Length; i++)
             {
-                SpawnEnemy(type);
-                spawnTimers[i] = 0f;
+                EnemySpawnData type = currentWave.enemyTypes[i];
+
+                if (timer >= type.stopTime)
+                    continue;
+
+                spawnTimers[i] += Time.deltaTime;
+
+                if (spawnTimers[i] >= type.spawnRate)
+                {
+                    SpawnEnemy(type);
+                    spawnTimers[i] = 0f;
+                }
+            }
+
+            if (!waveTimedOut && AllSpawningFinished() && enemiesAlive <= 0)
+            {
+                Debug.Log("Wave cleared early");
+                waveActive = false;
+                return;
+            }
+
+            if (!isSpawning && enemiesAlive <= 0)
+            {
+                Debug.Log("Wave fully cleared");
+                waveActive = false;
             }
         }
 
@@ -93,15 +105,9 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void EnemyDestroyed()
-    {
-        enemiesAlive--;
-        Debug.Log("Enemy destroyed, alive: " + enemiesAlive);
-
-    }
-
     private void SpawnEnemy(EnemySpawnData type)
     {
+        
         enemiesAlive++;
 
         Debug.Log("Enemy spawned, alive: " + enemiesAlive);
@@ -119,13 +125,25 @@ public class EnemySpawner : MonoBehaviour
             spawn.transform.position,
             Quaternion.identity
         );
-
+        EnemyMovement movement = enemy.GetComponent<EnemyMovement>();
+        movement.Init(spawn.entryPoint);
+        movement.SetSpawner(this);
         enemy.GetComponent<EnemyMovement>().Init(spawn.entryPoint);
     }
 
     public bool IsWaveFinished()
     {
-        return !waveActive && enemiesAlive <= 0;
+        if (waveFinishedSignaled)
+            return true;
+
+        if (!waveActive && enemiesAlive <= 0)
+        {
+            waveFinishedSignaled = true;
+            Debug.Log("Wave finished (latched)");
+            return true;
+        }
+
+        return false;
     }
 
     private void EndWaveByTimeout()
@@ -150,6 +168,21 @@ public class EnemySpawner : MonoBehaviour
         }
         return true;
     }
+
+    public void NotifyEnemyDestroyed()
+    {
+        enemiesAlive--;
+
+        if (enemiesAlive < 0)
+        {
+            Debug.LogError("enemiesAlive went negative! This should never happen.");
+            enemiesAlive = 0;
+        }
+
+        Debug.Log("Enemy destroyed, alive: " + enemiesAlive);
+    }
+
+    
 
 
 }

@@ -16,10 +16,17 @@ public class EnemyMovement : MonoBehaviour
 
     private enum ExitPhase { None, Vertical, Horizontal }
     private ExitPhase exitPhase;
+    private bool deathNotified = false;
+    private EnemySpawner spawner;
 
     public void Init(PathPoint entry)
     {
         target = entry;
+    }
+
+    public void SetSpawner(EnemySpawner spawner)
+    {
+        this.spawner = spawner;
     }
 
     private void Update()
@@ -126,11 +133,16 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnDestroy()
     {
-        EnemySpawner.onEnemyDestroy.Invoke();
+        if (deathNotified) return;
+        deathNotified = true;
+
+        if (spawner != null)
+            spawner.NotifyEnemyDestroyed();
+
         if (claimed != null)
-        {
             claimed.isOccupied = false;
-        }
+
+        Debug.Log("Enemy destroyed (counted once): " + gameObject.name);
     }
 
     public void ForceExit()

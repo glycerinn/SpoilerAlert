@@ -26,12 +26,7 @@ public class WaveManager : MonoBehaviour
 
     private void Update()
     {
-        if(currentWaveIndex == waves.Length && spawner.IsWaveFinished())
-        {
-            AudioManager.instance.playGameOverBGM(customerManager.customersRemaining);
-            gameOverScript.SetUp();
-            Time.timeScale = 0f;
-        }
+
     }
 
     private IEnumerator RunWave()
@@ -62,6 +57,9 @@ public class WaveManager : MonoBehaviour
             currentWaveIndex++;
         }
 
+        AudioManager.instance.playGameOverBGM(customerManager.customersRemaining);
+        gameOverScript.SetUp();
+        Time.timeScale = 0f;
         
         
     }

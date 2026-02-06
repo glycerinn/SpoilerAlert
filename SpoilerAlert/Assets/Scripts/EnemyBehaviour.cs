@@ -141,7 +141,6 @@ public class EnemyBehaviour : MonoBehaviour
     {
         isDying = true;
 
-        EnemySpawner.onEnemyDestroy.Invoke();
         StopSpoiler();
 
         animator.SetTrigger("Die");
